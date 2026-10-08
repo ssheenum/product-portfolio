@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swati Sheenum — Portfolio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.ss{--elastic:linear(0, 0.2178 2.1%, 1.1144 8.49%, 1.2959 10.7%, 1.3463 11.81%, 1.3705 12.94%, 1.3726, 1.3643 14.48%, 1.3151 16.2%, 1.0317 21.81%, 0.941 24.01%, 0.8912 25.91%, 0.8694 27.84%, 0.8698 29.21%, 0.8824 30.71%, 1.0122 38.33%, 1.0357, 1.046 42.71%, 1.0416 45.7%, 0.9961 53.26%, 0.9839 57.54%, 0.9853 60.71%, 1.0012 68.14%, 1.0056 72.24%, 0.9981 86.66%, 1);font-family:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.disp{font-family:"Archivo","Arial Narrow",sans-serif;font-stretch:62%;font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;line-height:.84;text-wrap:balance}
+.eyebrow{font-family:"Archivo","Arial Narrow",sans-serif;font-stretch:85%;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;line-height:1.25}
+a{color:inherit;text-decoration:none}
+img{display:block}
+.fill{width:100%;height:100%;object-fit:cover}
+.w{display:inline-block;transform-origin:50% 100%;animation:rise .9s var(--elastic) both}
+@keyframes rise{from{scale:1 0;translate:0 .25ch}to{scale:1 1;translate:0 0}}
+.pop{animation:pop 1s var(--elastic) both}
+@keyframes pop{from{scale:0}to{scale:1}}
+.fade{animation:fade 1.2s ease-out .25s both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.card{transition:scale .8s var(--elastic),translate .8s var(--elastic)}
+.card:hover{scale:1.06;translate:0 -6px}
+.pill{transition:scale .8s var(--elastic)}
+.pill:hover{scale:1.06}
+.pill:active{scale:.95}
+.icon{transition:scale .6s var(--elastic);display:inline-grid;place-items:center;width:44px;height:44px;border:0;background:transparent;color:inherit;cursor:pointer;padding:0}
+.icon:hover{scale:1.15}
+.icon.big{width:44px;height:44px}
+.icon.lab{width:auto;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 16px 0 11px;border-radius:999px;text-decoration:none}
+@media (max-width:420px){.icon.lab{padding:0 13px 0 10px;gap:7px}}
+@media (hover:hover) and (pointer:fine){section:has(.walker:hover) *,section:has(.walker:hover) *::before,section:has(.walker:hover) *::after{animation-play-state:paused !important}}
+@media (max-width:860px){
+.hdr{position:static !important}
+.hdr{flex-wrap:nowrap !important;gap:4px !important;padding:8px 8px !important}
+.hdr .wm{display:none !important}
+.hdr .icon{width:34px !important;height:34px !important}
+.hdr .icon svg{width:19px;height:19px}
+.hdr .hnav{flex-wrap:nowrap !important;gap:4px !important;flex:1 1 0 !important;min-width:0 !important;justify-content:center !important}
+.hdr .hnav .pill{min-height:32px !important;padding:0 7px !important;font-size:9.5px !important;letter-spacing:.05em !important;white-space:nowrap;flex:0 1 auto}
+.hdr .icon.lab{padding:0 !important;gap:0 !important;justify-content:center}
+.hdr .ablab{display:none !important}
+.hdr .hr{gap:0 !important;margin-left:0 !important}
+}
+@media (hover:hover) and (pointer:fine){
+.palwrap:hover .swatch{transform:scale(1) !important;opacity:1 !important;pointer-events:auto !important}
+.palwrap:hover .arcbox{pointer-events:auto !important}
+.palwrap:hover .icon.big{background:var(--ink);color:var(--ground);border-radius:50%}
+}
+.palwrap:has(:focus-visible) .swatch{transform:scale(1) !important;opacity:1 !important;pointer-events:auto !important}
+.palwrap:has(:focus-visible) .arcbox{pointer-events:auto !important}
+.palwrap:has(:focus-visible) .icon.big{background:transparent;color:inherit;border-radius:50%}
+.pairgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
+@media (max-width:520px){.pairgrid{gap:10px}}
+.ucgrid{display:grid;grid-template-columns:0.8fr 1.35fr;gap:28px;align-items:start;width:100%}
+@media (max-width:820px){.ucgrid{grid-template-columns:1fr;gap:36px}}
+
+.swatch{transition:scale .6s var(--elastic)}
+.swatch:hover{scale:1.15}
+.proj{display:block;position:relative;width:100%;max-width:500px;aspect-ratio:4/3;border-radius:22px;overflow:hidden;box-shadow:0 9px 21px rgba(0,0,0,.12),0 38px 38px rgba(0,0,0,.09),0 85px 51px rgba(0,0,0,.05);transition:scale .8s var(--elastic)}
+.proj:hover,.proj:focus-visible{scale:1.03}
+.proj img{position:absolute;inset:0;transition:opacity .6s ease}
+.proj .pb{opacity:0}
+.proj:hover .pb,.proj:focus-visible .pb{opacity:1}
+.pc{position:absolute;inset:0;transition:opacity .7s ease}
+.stack .l{transition:rotate .9s var(--elastic),translate .9s var(--elastic),scale .9s var(--elastic)}
+.stack:hover .l2{translate:6% -3%}
+.stack:hover .l1{translate:-5% -2%}
+.stack:hover .l0{scale:1.02}
+.stack:active .l0{scale:.97}
+.ul{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
+.ul:hover{text-decoration-thickness:3px}
+a:focus-visible,button:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.wk,.lane{--loop:11s}
+.walker{left:calc((100% - 72px) * .125);animation:wkwalk var(--loop) linear infinite}
+@keyframes wkwalk{0%{left:calc((100% - 72px) * .125);opacity:0}3%{left:calc((100% - 72px) * .125);opacity:1}88%{left:calc((100% - 72px) * .875 + 72px);opacity:1}93%{left:calc((100% - 72px) * .875 + 72px);opacity:1}97%{left:calc((100% - 72px) * .875 + 72px);opacity:0}100%{left:calc((100% - 72px) * .125);opacity:0}}
+.wk-line{stroke-dasharray:1;stroke-dashoffset:1;animation:wkdraw var(--loop) cubic-bezier(.3,.1,.5,1) infinite}
+@keyframes wkdraw{0%{stroke-dashoffset:1;opacity:1}3%{stroke-dashoffset:1;opacity:1}88%{stroke-dashoffset:0;opacity:1}93%{stroke-dashoffset:0;opacity:1}97%{stroke-dashoffset:0;opacity:0}99.9%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+.wk-head{opacity:0;transform-box:fill-box;transform-origin:50% 50%;animation:wkhead var(--loop) linear infinite}
+@keyframes wkhead{0%,85%{opacity:0;scale:.4}89%{opacity:1;scale:1}93%{opacity:1;scale:1}97%,100%{opacity:0;scale:1}}
+.wk-dot{animation:wkdotk var(--loop) linear infinite}
+@keyframes wkdotk{0%{opacity:0}2%,93%{opacity:1}97%,100%{opacity:0}}
+.wk-t{opacity:0;animation-duration:var(--loop);animation-iteration-count:infinite;animation-timing-function:linear}
+@keyframes wkt0{0%,8.31%{opacity:1}8.81%,100%{opacity:0}}
+.wk-t0{animation-name:wkt0}
+@keyframes wkt1{0%,8.31%{opacity:0}8.81%,18.94%{opacity:1}19.44%,100%{opacity:0}}
+.wk-t1{animation-name:wkt1}
+@keyframes wkt2{0%,18.94%{opacity:0}19.44%,29.56%{opacity:1}30.06%,100%{opacity:0}}
+.wk-t2{animation-name:wkt2}
+@keyframes wkt3{0%,29.56%{opacity:0}30.06%,40.19%{opacity:1}40.69%,100%{opacity:0}}
+.wk-t3{animation-name:wkt3}
+@keyframes wkt4{0%,40.19%{opacity:0}40.69%,50.81%{opacity:1}51.31%,100%{opacity:0}}
+.wk-t4{animation-name:wkt4}
+@keyframes wkt5{0%,50.81%{opacity:0}51.31%,61.44%{opacity:1}61.94%,100%{opacity:0}}
+.wk-t5{animation-name:wkt5}
+@keyframes wkt6{0%,61.44%{opacity:0}61.94%,72.06%{opacity:1}72.56%,100%{opacity:0}}
+.wk-t6{animation-name:wkt6}
+@keyframes wkt7{0%,72.06%{opacity:0}72.56%,82.69%{opacity:1}83.19%,100%{opacity:0}}
+.wk-t7{animation-name:wkt7}
+@keyframes wkt8{0%,82.69%{opacity:0}83.19%,100%{opacity:1}}
+.wk-t8{animation-name:wkt8}
+.step{transition:translate .6s ease,box-shadow .6s ease}
+@keyframes wkc0{0%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}4%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}16%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}20%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}100%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}}
+.wk-c0{animation:wkc0 var(--loop) ease-in-out infinite}
+@keyframes wkc1{0%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}28%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}44%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}48%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}100%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}}
+.wk-c1{animation:wkc1 var(--loop) ease-in-out infinite}
+@keyframes wkc2{0%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}56%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}72%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}76%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}100%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}}
+.wk-c2{animation:wkc2 var(--loop) ease-in-out infinite}
+@keyframes wkc3{0%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}80%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}96%{translate:0 -10px;box-shadow:0 16px 30px rgba(0,0,0,.16)}99%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}100%{translate:0 0;box-shadow:0 0 0 rgba(0,0,0,0)}}
+.wk-c3{animation:wkc3 var(--loop) ease-in-out infinite}
+@keyframes wkbobk{0%,100%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-5px) rotate(-.7deg)}50%{transform:translateY(0) rotate(0deg)}75%{transform:translateY(-5px) rotate(.7deg)}}
+.wkbob{animation:wkbobk 1.1s ease-in-out infinite;transform-origin:50% 100%}
+.wkc{animation-duration:var(--loop);animation-iteration-count:infinite;animation-timing-function:linear}
+@keyframes wkcA{0%,20%{opacity:1}26%,100%{opacity:0}}
+@keyframes wkcB{0%,20%{opacity:0}26%,48%{opacity:1}54%,100%{opacity:0}}
+@keyframes wkcC{0%,48%{opacity:0}54%,74%{opacity:1}79%,100%{opacity:0}}
+@keyframes wkcD{0%,74%{opacity:0}79%,100%{opacity:1}}
+.wkc0{animation-name:wkcA}.wkc1{animation-name:wkcB}.wkc2{animation-name:wkcC}.wkc3{animation-name:wkcD}
+@keyframes wkshk{0%,100%{transform:scaleX(1);opacity:1}25%,75%{transform:scaleX(.84);opacity:.72}}
+.wksh{animation:wkshk 1.1s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.wkbob,.wksh{animation:none}.wkc{animation:none;opacity:0}.wkc3{opacity:1}}
+@media (max-width:1100px){
+.lane{height:260px !important;margin:-8px 0 -6px !important}
+.walker{scale:.78;transform-origin:50% 100%}
+.wk,.lane{--loop:9s}
+[class*="wk-c"]{animation:none !important}
+}
+@media (max-width:600px){
+.lane{height:230px !important;margin:-4px 0 -4px !important}
+.walker{scale:.66}
+.wk,.lane{--loop:6.5s}
+}
+@media (max-width:1240px){
+.ab-hero{box-sizing:border-box !important;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:flex-start !important;gap:18px !important;min-height:0 !important;padding:36px 20px 8px !important;max-width:100% !important}
+.ab-hero .ab-h1,.ab-hero .ab-h2,.ab-hero .ab-mba,.ab-hero .ab-photo,.ab-hero .ab-p,.ab-hero .ab-link{position:static !important;left:auto !important;top:auto !important;width:auto !important;height:auto !important;max-width:100% !important}
+.ab-hero .ab-empty{display:none !important}
+.ab-eyebrow{order:0}
+.ab-hero .ab-h1{order:1;text-align:center !important;font-size:clamp(34px,9.5vw,72px) !important;max-width:none !important}
+.ab-hero .ab-h2{order:2;text-align:center;font-size:clamp(34px,9.5vw,72px) !important;max-width:none !important;margin-top:-6px !important}
+.ab-hero .ab-mba{order:3}
+.ab-hero .ab-mba .eyebrow{width:auto !important;height:auto !important;text-align:center}
+.ab-hero .ab-wrap{order:5;width:100% !important;margin:6px 0}
+.ab-hero .ab-photo{width:min(360px,78vw) !important;margin:0 auto}
+.ab-hero .ab-p{order:6;text-align:center !important;max-width:30em !important;font-size:19px !important}
+.ab-hero .ab-link{order:4;margin-top:0;justify-content:center}
+}
+@media (max-width:600px){
+section#top{grid-template-columns:minmax(0,1fr) !important;min-height:0 !important;gap:28px !important;padding-top:32px !important}
+.pop[style*="clamp(88px"]{width:17vw !important}
+h1.disp{font-size:clamp(34px,11.5vw,64px) !important}
+h2.disp{font-size:clamp(34px,10vw,56px) !important}
+.ab-hero .ab-h1,.ab-hero .ab-h2{font-size:clamp(34px,11vw,56px) !important}
+div[style*="grid-template-columns: 120px"]{grid-template-columns:minmax(0,1fr) 72px !important;gap:8px 14px !important}
+div[style*="grid-template-columns: 120px"]>:first-child{grid-column:1 / -1}
+div[style*="grid-template-columns: 120px"]>:nth-child(2):last-child{grid-column:1 / -1}
+section[style*="grid-column: 1 / -1"]{padding-left:0 !important;padding-right:0 !important;padding-bottom:56px !important}
+div.disp[style*="40cqi"]{font-size:30cqi !important;text-align:center}
+span.disp[style*="88px"]{font-size:60px !important}
+span.disp[style*="48px"]{font-size:38px !important}
+a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
+}
+@media (prefers-reduced-motion: reduce){.walker{animation:none;left:calc((100% - 72px) * .875 + 72px);opacity:1}.wk-line{animation:none;stroke-dashoffset:0}.wk-head{animation:none;opacity:1}.wk-dot{animation:none;opacity:1}.wk-t,.wk-bob,.wk-bust,.wk-arm,.wk-thigh,.wk-shin,.wk-foot,[class*="wk-c"]{animation:none}.wk-t8{opacity:1}}
+@keyframes legA{0.00%{transform:translate(0px,0.00px) rotate(-8.10deg)}2.08%{transform:translate(0px,0.00px) rotate(-6.66deg)}4.17%{transform:translate(0px,0.00px) rotate(-5.22deg)}6.25%{transform:translate(0px,0.00px) rotate(-3.78deg)}8.33%{transform:translate(0px,0.00px) rotate(-2.34deg)}10.42%{transform:translate(0px,0.00px) rotate(-0.90deg)}12.50%{transform:translate(0px,0.00px) rotate(0.54deg)}14.58%{transform:translate(0px,0.00px) rotate(1.98deg)}16.67%{transform:translate(0px,0.00px) rotate(3.42deg)}18.75%{transform:translate(0px,0.00px) rotate(4.85deg)}20.83%{transform:translate(0px,0.00px) rotate(6.29deg)}22.92%{transform:translate(0px,0.00px) rotate(7.73deg)}25.00%{transform:translate(0px,0.00px) rotate(9.17deg)}27.08%{transform:translate(0px,0.00px) rotate(10.61deg)}29.17%{transform:translate(0px,0.00px) rotate(12.05deg)}31.25%{transform:translate(0px,0.00px) rotate(13.49deg)}33.33%{transform:translate(0px,0.00px) rotate(14.93deg)}35.42%{transform:translate(0px,0.00px) rotate(16.37deg)}37.50%{transform:translate(0px,0.00px) rotate(17.81deg)}39.58%{transform:translate(0px,0.00px) rotate(19.25deg)}41.67%{transform:translate(0px,0.00px) rotate(20.69deg)}43.75%{transform:translate(0px,0.00px) rotate(22.13deg)}45.83%{transform:translate(0px,0.00px) rotate(23.57deg)}47.92%{transform:translate(0px,0.00px) rotate(25.01deg)}50.00%{transform:translate(0px,0.00px) rotate(26.45deg)}52.08%{transform:translate(0px,0.00px) rotate(27.88deg)}54.17%{transform:translate(0px,0.00px) rotate(29.32deg)}56.25%{transform:translate(0px,-1.57px) rotate(29.81deg)}58.33%{transform:translate(0px,-4.15px) rotate(29.31deg)}60.42%{transform:translate(0px,-6.65px) rotate(28.38deg)}62.50%{transform:translate(0px,-9.00px) rotate(27.09deg)}64.58%{transform:translate(0px,-11.16px) rotate(25.46deg)}66.67%{transform:translate(0px,-13.09px) rotate(23.56deg)}68.75%{transform:translate(0px,-14.74px) rotate(21.42deg)}70.83%{transform:translate(0px,-16.09px) rotate(19.10deg)}72.92%{transform:translate(0px,-17.09px) rotate(16.63deg)}75.00%{transform:translate(0px,-17.73px) rotate(14.05deg)}77.08%{transform:translate(0px,-17.99px) rotate(11.43deg)}79.17%{transform:translate(0px,-17.88px) rotate(8.79deg)}81.25%{transform:translate(0px,-17.39px) rotate(6.19deg)}83.33%{transform:translate(0px,-16.53px) rotate(3.68deg)}85.42%{transform:translate(0px,-15.32px) rotate(1.29deg)}87.50%{transform:translate(0px,-13.79px) rotate(-0.93deg)}89.58%{transform:translate(0px,-11.97px) rotate(-2.93deg)}91.67%{transform:translate(0px,-9.89px) rotate(-4.67deg)}93.75%{transform:translate(0px,-7.61px) rotate(-6.10deg)}95.83%{transform:translate(0px,-5.16px) rotate(-7.18deg)}97.92%{transform:translate(0px,-2.61px) rotate(-7.86deg)}100.00%{transform:translate(0px,0.00px) rotate(-8.10deg)}}
+@keyframes tubeA{0.00%{transform:scale(1,1.000)}2.08%{transform:scale(1,1.000)}4.17%{transform:scale(1,1.000)}6.25%{transform:scale(1,1.000)}8.33%{transform:scale(1,1.000)}10.42%{transform:scale(1,1.000)}12.50%{transform:scale(1,1.000)}14.58%{transform:scale(1,1.000)}16.67%{transform:scale(1,1.000)}18.75%{transform:scale(1,1.000)}20.83%{transform:scale(1,1.000)}22.92%{transform:scale(1,1.000)}25.00%{transform:scale(1,1.000)}27.08%{transform:scale(1,1.000)}29.17%{transform:scale(1,1.000)}31.25%{transform:scale(1,1.000)}33.33%{transform:scale(1,1.000)}35.42%{transform:scale(1,1.000)}37.50%{transform:scale(1,1.000)}39.58%{transform:scale(1,1.000)}41.67%{transform:scale(1,1.000)}43.75%{transform:scale(1,1.000)}45.83%{transform:scale(1,1.000)}47.92%{transform:scale(1,1.000)}50.00%{transform:scale(1,1.000)}52.08%{transform:scale(1,0.993)}54.17%{transform:scale(1,0.985)}56.25%{transform:scale(1,0.976)}58.33%{transform:scale(1,0.967)}60.42%{transform:scale(1,0.959)}62.50%{transform:scale(1,0.951)}64.58%{transform:scale(1,0.943)}66.67%{transform:scale(1,0.937)}68.75%{transform:scale(1,0.932)}70.83%{transform:scale(1,0.928)}72.92%{transform:scale(1,0.926)}75.00%{transform:scale(1,0.925)}77.08%{transform:scale(1,0.926)}79.17%{transform:scale(1,0.928)}81.25%{transform:scale(1,0.932)}83.33%{transform:scale(1,0.937)}85.42%{transform:scale(1,0.943)}87.50%{transform:scale(1,0.951)}89.58%{transform:scale(1,0.959)}91.67%{transform:scale(1,0.967)}93.75%{transform:scale(1,0.976)}95.83%{transform:scale(1,0.985)}97.92%{transform:scale(1,0.993)}100.00%{transform:scale(1,1.000)}}
+@keyframes footA{0.00%{transform:translate(0px,0.00px) rotate(-13.90deg)}2.08%{transform:translate(0px,0.00px) rotate(-13.32deg)}4.17%{transform:translate(0px,0.00px) rotate(-10.01deg)}6.25%{transform:translate(0px,0.00px) rotate(-5.91deg)}8.33%{transform:translate(0px,0.00px) rotate(-2.99deg)}10.42%{transform:translate(0px,0.00px) rotate(-2.98deg)}12.50%{transform:translate(0px,0.00px) rotate(-1.80deg)}14.58%{transform:translate(0px,0.00px) rotate(-1.98deg)}16.67%{transform:translate(0px,0.00px) rotate(-3.42deg)}18.75%{transform:translate(0px,0.00px) rotate(-4.85deg)}20.83%{transform:translate(0px,0.00px) rotate(-6.29deg)}22.92%{transform:translate(0px,0.00px) rotate(-7.73deg)}25.00%{transform:translate(0px,0.00px) rotate(-9.17deg)}27.08%{transform:translate(0px,0.00px) rotate(-10.61deg)}29.17%{transform:translate(0px,0.00px) rotate(-12.05deg)}31.25%{transform:translate(0px,0.00px) rotate(-13.49deg)}33.33%{transform:translate(0px,0.00px) rotate(-14.93deg)}35.42%{transform:translate(0px,0.00px) rotate(-16.37deg)}37.50%{transform:translate(0px,0.00px) rotate(-17.81deg)}39.58%{transform:translate(0px,0.00px) rotate(-18.42deg)}41.67%{transform:translate(0px,0.00px) rotate(-16.63deg)}43.75%{transform:translate(0px,0.00px) rotate(-13.09deg)}45.83%{transform:translate(0px,0.00px) rotate(-8.56deg)}47.92%{transform:translate(0px,0.00px) rotate(-3.80deg)}50.00%{transform:translate(0px,-0.00px) rotate(0.46deg)}52.08%{transform:translate(0px,-1.27px) rotate(3.46deg)}54.17%{transform:translate(0px,-2.89px) rotate(4.44deg)}56.25%{transform:translate(0px,-4.62px) rotate(4.02deg)}58.33%{transform:translate(0px,-6.37px) rotate(3.77deg)}60.42%{transform:translate(0px,-8.06px) rotate(3.88deg)}62.50%{transform:translate(0px,-9.65px) rotate(4.84deg)}64.58%{transform:translate(0px,-11.08px) rotate(4.72deg)}66.67%{transform:translate(0px,-12.31px) rotate(3.09deg)}68.75%{transform:translate(0px,-13.30px) rotate(0.60deg)}70.83%{transform:translate(0px,-14.03px) rotate(-2.12deg)}72.92%{transform:translate(0px,-14.47px) rotate(-4.42deg)}75.00%{transform:translate(0px,-14.62px) rotate(-5.65deg)}77.08%{transform:translate(0px,-14.47px) rotate(-5.18deg)}79.17%{transform:translate(0px,-14.03px) rotate(-3.19deg)}81.25%{transform:translate(0px,-13.30px) rotate(-2.93deg)}83.33%{transform:translate(0px,-12.31px) rotate(-4.17deg)}85.42%{transform:translate(0px,-11.08px) rotate(-6.18deg)}87.50%{transform:translate(0px,-9.65px) rotate(-8.20deg)}89.58%{transform:translate(0px,-8.06px) rotate(-9.48deg)}91.67%{transform:translate(0px,-6.37px) rotate(-9.29deg)}93.75%{transform:translate(0px,-4.62px) rotate(-8.88deg)}95.83%{transform:translate(0px,-2.89px) rotate(-10.57deg)}97.92%{transform:translate(0px,-1.27px) rotate(-12.79deg)}100.00%{transform:translate(0px,0.00px) rotate(-13.90deg)}}
+@keyframes legB{0.00%{transform:translate(0px,0.00px) rotate(26.45deg)}2.08%{transform:translate(0px,0.00px) rotate(27.88deg)}4.17%{transform:translate(0px,0.00px) rotate(29.32deg)}6.25%{transform:translate(0px,-1.57px) rotate(29.81deg)}8.33%{transform:translate(0px,-4.15px) rotate(29.31deg)}10.42%{transform:translate(0px,-6.65px) rotate(28.38deg)}12.50%{transform:translate(0px,-9.00px) rotate(27.09deg)}14.58%{transform:translate(0px,-11.16px) rotate(25.46deg)}16.67%{transform:translate(0px,-13.09px) rotate(23.56deg)}18.75%{transform:translate(0px,-14.74px) rotate(21.42deg)}20.83%{transform:translate(0px,-16.09px) rotate(19.10deg)}22.92%{transform:translate(0px,-17.09px) rotate(16.63deg)}25.00%{transform:translate(0px,-17.73px) rotate(14.05deg)}27.08%{transform:translate(0px,-17.99px) rotate(11.43deg)}29.17%{transform:translate(0px,-17.88px) rotate(8.79deg)}31.25%{transform:translate(0px,-17.39px) rotate(6.19deg)}33.33%{transform:translate(0px,-16.53px) rotate(3.68deg)}35.42%{transform:translate(0px,-15.32px) rotate(1.29deg)}37.50%{transform:translate(0px,-13.79px) rotate(-0.93deg)}39.58%{transform:translate(0px,-11.97px) rotate(-2.93deg)}41.67%{transform:translate(0px,-9.89px) rotate(-4.67deg)}43.75%{transform:translate(0px,-7.61px) rotate(-6.10deg)}45.83%{transform:translate(0px,-5.16px) rotate(-7.18deg)}47.92%{transform:translate(0px,-2.61px) rotate(-7.86deg)}50.00%{transform:translate(0px,0.00px) rotate(-8.10deg)}52.08%{transform:translate(0px,0.00px) rotate(-6.66deg)}54.17%{transform:translate(0px,0.00px) rotate(-5.22deg)}56.25%{transform:translate(0px,0.00px) rotate(-3.78deg)}58.33%{transform:translate(0px,0.00px) rotate(-2.34deg)}60.42%{transform:translate(0px,0.00px) rotate(-0.90deg)}62.50%{transform:translate(0px,0.00px) rotate(0.54deg)}64.58%{transform:translate(0px,0.00px) rotate(1.98deg)}66.67%{transform:translate(0px,0.00px) rotate(3.42deg)}68.75%{transform:translate(0px,0.00px) rotate(4.85deg)}70.83%{transform:translate(0px,0.00px) rotate(6.29deg)}72.92%{transform:translate(0px,0.00px) rotate(7.73deg)}75.00%{transform:translate(0px,0.00px) rotate(9.17deg)}77.08%{transform:translate(0px,0.00px) rotate(10.61deg)}79.17%{transform:translate(0px,0.00px) rotate(12.05deg)}81.25%{transform:translate(0px,0.00px) rotate(13.49deg)}83.33%{transform:translate(0px,0.00px) rotate(14.93deg)}85.42%{transform:translate(0px,0.00px) rotate(16.37deg)}87.50%{transform:translate(0px,0.00px) rotate(17.81deg)}89.58%{transform:translate(0px,0.00px) rotate(19.25deg)}91.67%{transform:translate(0px,0.00px) rotate(20.69deg)}93.75%{transform:translate(0px,0.00px) rotate(22.13deg)}95.83%{transform:translate(0px,0.00px) rotate(23.57deg)}97.92%{transform:translate(0px,0.00px) rotate(25.01deg)}100.00%{transform:translate(0px,0.00px) rotate(26.45deg)}}
+@keyframes tubeB{0.00%{transform:scale(1,1.000)}2.08%{transform:scale(1,0.993)}4.17%{transform:scale(1,0.985)}6.25%{transform:scale(1,0.976)}8.33%{transform:scale(1,0.967)}10.42%{transform:scale(1,0.959)}12.50%{transform:scale(1,0.951)}14.58%{transform:scale(1,0.943)}16.67%{transform:scale(1,0.937)}18.75%{transform:scale(1,0.932)}20.83%{transform:scale(1,0.928)}22.92%{transform:scale(1,0.926)}25.00%{transform:scale(1,0.925)}27.08%{transform:scale(1,0.926)}29.17%{transform:scale(1,0.928)}31.25%{transform:scale(1,0.932)}33.33%{transform:scale(1,0.937)}35.42%{transform:scale(1,0.943)}37.50%{transform:scale(1,0.951)}39.58%{transform:scale(1,0.959)}41.67%{transform:scale(1,0.967)}43.75%{transform:scale(1,0.976)}45.83%{transform:scale(1,0.985)}47.92%{transform:scale(1,0.993)}50.00%{transform:scale(1,1.000)}52.08%{transform:scale(1,1.000)}54.17%{transform:scale(1,1.000)}56.25%{transform:scale(1,1.000)}58.33%{transform:scale(1,1.000)}60.42%{transform:scale(1,1.000)}62.50%{transform:scale(1,1.000)}64.58%{transform:scale(1,1.000)}66.67%{transform:scale(1,1.000)}68.75%{transform:scale(1,1.000)}70.83%{transform:scale(1,1.000)}72.92%{transform:scale(1,1.000)}75.00%{transform:scale(1,1.000)}77.08%{transform:scale(1,1.000)}79.17%{transform:scale(1,1.000)}81.25%{transform:scale(1,1.000)}83.33%{transform:scale(1,1.000)}85.42%{transform:scale(1,1.000)}87.50%{transform:scale(1,1.000)}89.58%{transform:scale(1,1.000)}91.67%{transform:scale(1,1.000)}93.75%{transform:scale(1,1.000)}95.83%{transform:scale(1,1.000)}97.92%{transform:scale(1,1.000)}100.00%{transform:scale(1,1.000)}}
+@keyframes footB{0.00%{transform:translate(0px,-0.00px) rotate(0.46deg)}2.08%{transform:translate(0px,-1.27px) rotate(3.46deg)}4.17%{transform:translate(0px,-2.89px) rotate(4.44deg)}6.25%{transform:translate(0px,-4.62px) rotate(4.02deg)}8.33%{transform:translate(0px,-6.37px) rotate(3.77deg)}10.42%{transform:translate(0px,-8.06px) rotate(3.88deg)}12.50%{transform:translate(0px,-9.65px) rotate(4.84deg)}14.58%{transform:translate(0px,-11.08px) rotate(4.72deg)}16.67%{transform:translate(0px,-12.31px) rotate(3.09deg)}18.75%{transform:translate(0px,-13.30px) rotate(0.60deg)}20.83%{transform:translate(0px,-14.03px) rotate(-2.12deg)}22.92%{transform:translate(0px,-14.47px) rotate(-4.42deg)}25.00%{transform:translate(0px,-14.62px) rotate(-5.65deg)}27.08%{transform:translate(0px,-14.47px) rotate(-5.18deg)}29.17%{transform:translate(0px,-14.03px) rotate(-3.19deg)}31.25%{transform:translate(0px,-13.30px) rotate(-2.93deg)}33.33%{transform:translate(0px,-12.31px) rotate(-4.17deg)}35.42%{transform:translate(0px,-11.08px) rotate(-6.18deg)}37.50%{transform:translate(0px,-9.65px) rotate(-8.20deg)}39.58%{transform:translate(0px,-8.06px) rotate(-9.48deg)}41.67%{transform:translate(0px,-6.37px) rotate(-9.29deg)}43.75%{transform:translate(0px,-4.62px) rotate(-8.88deg)}45.83%{transform:translate(0px,-2.89px) rotate(-10.57deg)}47.92%{transform:translate(0px,-1.27px) rotate(-12.79deg)}50.00%{transform:translate(0px,0.00px) rotate(-13.90deg)}52.08%{transform:translate(0px,0.00px) rotate(-13.32deg)}54.17%{transform:translate(0px,0.00px) rotate(-10.01deg)}56.25%{transform:translate(0px,0.00px) rotate(-5.91deg)}58.33%{transform:translate(0px,0.00px) rotate(-2.99deg)}60.42%{transform:translate(0px,0.00px) rotate(-2.98deg)}62.50%{transform:translate(0px,0.00px) rotate(-1.80deg)}64.58%{transform:translate(0px,0.00px) rotate(-1.98deg)}66.67%{transform:translate(0px,0.00px) rotate(-3.42deg)}68.75%{transform:translate(0px,0.00px) rotate(-4.85deg)}70.83%{transform:translate(0px,0.00px) rotate(-6.29deg)}72.92%{transform:translate(0px,0.00px) rotate(-7.73deg)}75.00%{transform:translate(0px,0.00px) rotate(-9.17deg)}77.08%{transform:translate(0px,0.00px) rotate(-10.61deg)}79.17%{transform:translate(0px,0.00px) rotate(-12.05deg)}81.25%{transform:translate(0px,0.00px) rotate(-13.49deg)}83.33%{transform:translate(0px,0.00px) rotate(-14.93deg)}85.42%{transform:translate(0px,0.00px) rotate(-16.37deg)}87.50%{transform:translate(0px,0.00px) rotate(-17.81deg)}89.58%{transform:translate(0px,0.00px) rotate(-18.42deg)}91.67%{transform:translate(0px,0.00px) rotate(-16.63deg)}93.75%{transform:translate(0px,0.00px) rotate(-13.09deg)}95.83%{transform:translate(0px,0.00px) rotate(-8.56deg)}97.92%{transform:translate(0px,0.00px) rotate(-3.80deg)}100.00%{transform:translate(0px,-0.00px) rotate(0.46deg)}}
+@keyframes armR{0.00%{transform:rotate(-10.00deg)}2.08%{transform:rotate(-9.91deg)}4.17%{transform:rotate(-9.66deg)}6.25%{transform:rotate(-9.24deg)}8.33%{transform:rotate(-8.66deg)}10.42%{transform:rotate(-7.93deg)}12.50%{transform:rotate(-7.07deg)}14.58%{transform:rotate(-6.09deg)}16.67%{transform:rotate(-5.00deg)}18.75%{transform:rotate(-3.83deg)}20.83%{transform:rotate(-2.59deg)}22.92%{transform:rotate(-1.31deg)}25.00%{transform:rotate(-0.00deg)}27.08%{transform:rotate(1.31deg)}29.17%{transform:rotate(2.59deg)}31.25%{transform:rotate(3.83deg)}33.33%{transform:rotate(5.00deg)}35.42%{transform:rotate(6.09deg)}37.50%{transform:rotate(7.07deg)}39.58%{transform:rotate(7.93deg)}41.67%{transform:rotate(8.66deg)}43.75%{transform:rotate(9.24deg)}45.83%{transform:rotate(9.66deg)}47.92%{transform:rotate(9.91deg)}50.00%{transform:rotate(10.00deg)}52.08%{transform:rotate(9.91deg)}54.17%{transform:rotate(9.66deg)}56.25%{transform:rotate(9.24deg)}58.33%{transform:rotate(8.66deg)}60.42%{transform:rotate(7.93deg)}62.50%{transform:rotate(7.07deg)}64.58%{transform:rotate(6.09deg)}66.67%{transform:rotate(5.00deg)}68.75%{transform:rotate(3.83deg)}70.83%{transform:rotate(2.59deg)}72.92%{transform:rotate(1.31deg)}75.00%{transform:rotate(0.00deg)}77.08%{transform:rotate(-1.31deg)}79.17%{transform:rotate(-2.59deg)}81.25%{transform:rotate(-3.83deg)}83.33%{transform:rotate(-5.00deg)}85.42%{transform:rotate(-6.09deg)}87.50%{transform:rotate(-7.07deg)}89.58%{transform:rotate(-7.93deg)}91.67%{transform:rotate(-8.66deg)}93.75%{transform:rotate(-9.24deg)}95.83%{transform:rotate(-9.66deg)}97.92%{transform:rotate(-9.91deg)}100.00%{transform:rotate(-10.00deg)}}
+@keyframes armL{0.00%{transform:rotate(10.00deg)}2.08%{transform:rotate(9.91deg)}4.17%{transform:rotate(9.66deg)}6.25%{transform:rotate(9.24deg)}8.33%{transform:rotate(8.66deg)}10.42%{transform:rotate(7.93deg)}12.50%{transform:rotate(7.07deg)}14.58%{transform:rotate(6.09deg)}16.67%{transform:rotate(5.00deg)}18.75%{transform:rotate(3.83deg)}20.83%{transform:rotate(2.59deg)}22.92%{transform:rotate(1.31deg)}25.00%{transform:rotate(0.00deg)}27.08%{transform:rotate(-1.31deg)}29.17%{transform:rotate(-2.59deg)}31.25%{transform:rotate(-3.83deg)}33.33%{transform:rotate(-5.00deg)}35.42%{transform:rotate(-6.09deg)}37.50%{transform:rotate(-7.07deg)}39.58%{transform:rotate(-7.93deg)}41.67%{transform:rotate(-8.66deg)}43.75%{transform:rotate(-9.24deg)}45.83%{transform:rotate(-9.66deg)}47.92%{transform:rotate(-9.91deg)}50.00%{transform:rotate(-10.00deg)}52.08%{transform:rotate(-9.91deg)}54.17%{transform:rotate(-9.66deg)}56.25%{transform:rotate(-9.24deg)}58.33%{transform:rotate(-8.66deg)}60.42%{transform:rotate(-7.93deg)}62.50%{transform:rotate(-7.07deg)}64.58%{transform:rotate(-6.09deg)}66.67%{transform:rotate(-5.00deg)}68.75%{transform:rotate(-3.83deg)}70.83%{transform:rotate(-2.59deg)}72.92%{transform:rotate(-1.31deg)}75.00%{transform:rotate(-0.00deg)}77.08%{transform:rotate(1.31deg)}79.17%{transform:rotate(2.59deg)}81.25%{transform:rotate(3.83deg)}83.33%{transform:rotate(5.00deg)}85.42%{transform:rotate(6.09deg)}87.50%{transform:rotate(7.07deg)}89.58%{transform:rotate(7.93deg)}91.67%{transform:rotate(8.66deg)}93.75%{transform:rotate(9.24deg)}95.83%{transform:rotate(9.66deg)}97.92%{transform:rotate(9.91deg)}100.00%{transform:rotate(10.00deg)}}
+@keyframes torso{0.00%{transform:translate(0.00px,0px) rotate(-0.43deg)}2.08%{transform:translate(0.23px,0px) rotate(-0.26deg)}4.17%{transform:translate(0.47px,0px) rotate(-0.07deg)}6.25%{transform:translate(0.69px,0px) rotate(0.11deg)}8.33%{transform:translate(0.90px,0px) rotate(0.29deg)}10.42%{transform:translate(1.10px,0px) rotate(0.47deg)}12.50%{transform:translate(1.27px,0px) rotate(0.64deg)}14.58%{transform:translate(1.43px,0px) rotate(0.79deg)}16.67%{transform:translate(1.56px,0px) rotate(0.94deg)}18.75%{transform:translate(1.66px,0px) rotate(1.06deg)}20.83%{transform:translate(1.74px,0px) rotate(1.17deg)}22.92%{transform:translate(1.78px,0px) rotate(1.26deg)}25.00%{transform:translate(1.80px,0px) rotate(1.33deg)}27.08%{transform:translate(1.78px,0px) rotate(1.38deg)}29.17%{transform:translate(1.74px,0px) rotate(1.40deg)}31.25%{transform:translate(1.66px,0px) rotate(1.40deg)}33.33%{transform:translate(1.56px,0px) rotate(1.37deg)}35.42%{transform:translate(1.43px,0px) rotate(1.32deg)}37.50%{transform:translate(1.27px,0px) rotate(1.25deg)}39.58%{transform:translate(1.10px,0px) rotate(1.15deg)}41.67%{transform:translate(0.90px,0px) rotate(1.04deg)}43.75%{transform:translate(0.69px,0px) rotate(0.91deg)}45.83%{transform:translate(0.47px,0px) rotate(0.76deg)}47.92%{transform:translate(0.23px,0px) rotate(0.60deg)}50.00%{transform:translate(0.00px,0px) rotate(0.43deg)}52.08%{transform:translate(-0.23px,0px) rotate(0.26deg)}54.17%{transform:translate(-0.47px,0px) rotate(0.07deg)}56.25%{transform:translate(-0.69px,0px) rotate(-0.11deg)}58.33%{transform:translate(-0.90px,0px) rotate(-0.29deg)}60.42%{transform:translate(-1.10px,0px) rotate(-0.47deg)}62.50%{transform:translate(-1.27px,0px) rotate(-0.64deg)}64.58%{transform:translate(-1.43px,0px) rotate(-0.79deg)}66.67%{transform:translate(-1.56px,0px) rotate(-0.94deg)}68.75%{transform:translate(-1.66px,0px) rotate(-1.06deg)}70.83%{transform:translate(-1.74px,0px) rotate(-1.17deg)}72.92%{transform:translate(-1.78px,0px) rotate(-1.26deg)}75.00%{transform:translate(-1.80px,0px) rotate(-1.33deg)}77.08%{transform:translate(-1.78px,0px) rotate(-1.38deg)}79.17%{transform:translate(-1.74px,0px) rotate(-1.40deg)}81.25%{transform:translate(-1.66px,0px) rotate(-1.40deg)}83.33%{transform:translate(-1.56px,0px) rotate(-1.37deg)}85.42%{transform:translate(-1.43px,0px) rotate(-1.32deg)}87.50%{transform:translate(-1.27px,0px) rotate(-1.25deg)}89.58%{transform:translate(-1.10px,0px) rotate(-1.15deg)}91.67%{transform:translate(-0.90px,0px) rotate(-1.04deg)}93.75%{transform:translate(-0.69px,0px) rotate(-0.91deg)}95.83%{transform:translate(-0.47px,0px) rotate(-0.76deg)}97.92%{transform:translate(-0.23px,0px) rotate(-0.60deg)}100.00%{transform:translate(-0.00px,0px) rotate(-0.43deg)}}
+@keyframes hipbob{0.00%{translate:0 -0.00px}2.08%{translate:0 -0.24px}4.17%{translate:0 -0.94px}6.25%{translate:0 -2.05px}8.33%{translate:0 -3.50px}10.42%{translate:0 -5.19px}12.50%{translate:0 -7.00px}14.58%{translate:0 -8.81px}16.67%{translate:0 -10.50px}18.75%{translate:0 -11.95px}20.83%{translate:0 -13.06px}22.92%{translate:0 -13.76px}25.00%{translate:0 -14.00px}27.08%{translate:0 -13.76px}29.17%{translate:0 -13.06px}31.25%{translate:0 -11.95px}33.33%{translate:0 -10.50px}35.42%{translate:0 -8.81px}37.50%{translate:0 -7.00px}39.58%{translate:0 -5.19px}41.67%{translate:0 -3.50px}43.75%{translate:0 -2.05px}45.83%{translate:0 -0.94px}47.92%{translate:0 -0.24px}50.00%{translate:0 -0.00px}52.08%{translate:0 -0.24px}54.17%{translate:0 -0.94px}56.25%{translate:0 -2.05px}58.33%{translate:0 -3.50px}60.42%{translate:0 -5.19px}62.50%{translate:0 -7.00px}64.58%{translate:0 -8.81px}66.67%{translate:0 -10.50px}68.75%{translate:0 -11.95px}70.83%{translate:0 -13.06px}72.92%{translate:0 -13.76px}75.00%{translate:0 -14.00px}77.08%{translate:0 -13.76px}79.17%{translate:0 -13.06px}81.25%{translate:0 -11.95px}83.33%{translate:0 -10.50px}85.42%{translate:0 -8.81px}87.50%{translate:0 -7.00px}89.58%{translate:0 -5.19px}91.67%{translate:0 -3.50px}93.75%{translate:0 -2.05px}95.83%{translate:0 -0.94px}97.92%{translate:0 -0.24px}100.00%{translate:0 -0.00px}}
+.wk-leg,.wk-tube,.wk-foot,.wk-arm,.wk-torso,.wk-hip{animation-duration:1.1s;animation-iteration-count:infinite;animation-timing-function:linear}
+.wk-hip{animation-name:hipbob}.wk-torso{animation-name:torso}
+.wk-armR{animation-name:armR}.wk-armL{animation-name:armL}
+.wk-legA{animation-name:legA}.wk-legB{animation-name:legB}
+.wk-tubeA{animation-name:tubeA}.wk-tubeB{animation-name:tubeB}
+.wk-footA{animation-name:footA}.wk-footB{animation-name:footB}
+@media (prefers-reduced-motion: reduce){.wk-leg,.wk-tube,.wk-foot,.wk-sp,.wk-arm,.wk-torso,.wk-hip{animation:none}}@media (prefers-reduced-motion: reduce){.w,.pop,.fade{animation:none}.card,.pill,.icon,.swatch,.proj,.proj img,.pc,.stack .l{transition:none}}
+</style>
+</helmet>
+<div class="ss" style="--ink: {{t.ink}}; --ground: {{t.ground}}; background: {{t.ground}}; color: {{t.ink}}; transition: background .6s ease, color .6s ease; min-height: 100vh">
+
+  <header class="hdr" style="position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 18px; padding: 10px clamp(16px, 4vw, 48px); background: {{t.ground}}; transition: background .6s ease">
+    <div style="display: flex; align-items: center; gap: 2px">
+      <sc-if value="{{canBack}}" hint-placeholder-val="{{true}}">
+        <button type="button" class="icon" aria-label="Go back" onClick="{{back}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button>
+      </sc-if>
+      <a href="#top" class="icon" aria-label="Home" onClick="{{nav.home}}" style="{{homeStyle}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5M6 10v9.5h4.5V14h3v5.5H18V10"></path></svg></a>
+      <a href="#top" onClick="{{nav.home}}" class="disp wm" style="font-size: 26px; line-height: 1; letter-spacing: 0; margin-left: 10px">Swati Sheenum</a>
+    </div>
+    <nav aria-label="Primary" class="hnav" style="display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 auto; justify-content: center">
+      <sc-for list="{{pills}}" as="p" hint-placeholder-count="4">
+        <a href="#top" class="pill eyebrow" aria-current="{{p.current}}" onClick="{{p.go}}" style="{{p.style}}">{{p.label}}</a>
+      </sc-for>
+    </nav>
+    <div class="hr" style="display: flex; align-items: center; gap: 2px; position: relative; margin-left: auto">
+      <span class="palwrap" style="position: relative; display: inline-flex">
+        <button type="button" class="icon big" aria-label="Change colours" aria-expanded="{{palOpen}}" onClick="{{palToggle}}" style="{{palStyle}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c.92 0 1.6-.72 1.6-1.55 0-.42-.18-.78-.44-1.05-.28-.28-.44-.63-.44-1.05 0-.83.72-1.55 1.6-1.55h1.86A4.82 4.82 0 0 0 21 11c0-4.42-4.03-8-9-8z"></path><circle cx="8.3" cy="9.6" r="1.15" fill="currentColor" stroke="none"></circle><circle cx="12" cy="7.6" r="1.15" fill="currentColor" stroke="none"></circle><circle cx="15.7" cy="9.6" r="1.15" fill="currentColor" stroke="none"></circle><circle cx="7.6" cy="13.6" r="1.15" fill="currentColor" stroke="none"></circle></svg></button>
+        <span class="arcbox" role="group" aria-label="Colour theme" style="{{palArc}}">
+          <sc-for list="{{themes}}" as="th" hint-placeholder-count="5">
+            <button type="button" class="swatch" aria-label="{{th.label}}" aria-pressed="{{th.pressed}}" onClick="{{th.pick}}" style="{{th.sw}}"></button>
+          </sc-for>
+        </span>
+      </span>
+      <a href="#top" class="icon lab" aria-label="About Me" aria-current="{{aboutCurrent}}" onClick="{{nav.about}}" style="{{aboutStyle}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"></circle><path d="M5.6 20c.55-3.6 3.25-5.7 6.4-5.7s5.85 2.1 6.4 5.7"></path></svg><span class="disp ablab" style="font-size: 26px; line-height: 1; letter-spacing: 0">About Me</span></a>
+    </div>
+  </header>
+
+  <sc-if value="{{v.home}}" hint-placeholder-val="{{true}}">
+
+
+  <section id="top" style="min-height: 620px; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; align-items: center; gap: 26px; text-align: center; padding: 34px 20px 34px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 15px; max-width: 46em"><span class="eyebrow">san francisco, Ca</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: clamp(20px, 3vw, 38px); width: 100%">
+      <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7vw, 104px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Designer</span> <span class="w" style="animation-delay: 0.12s">of everyday</span><span class="w" style="animation-delay: 0.26s">products</span></h1>
+
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 1040px">
+        <div class="pop" style="animation-delay: .45s; width: clamp(88px, 13vw, 190px); margin-right: -3%">
+          <div class="card" style="aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; rotate: 3deg; translate: 0 8%; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+            <img class="fill" src="474decc7880d2a09fba55973f4a1b01d.jpg" alt="Colour-block portrait painting" style="object-position: 50% 30%">
+          </div>
+        </div>
+        <div class="pop" style="animation-delay: .53s; width: clamp(88px, 13vw, 190px); margin-right: -3%">
+          <div class="card" style="aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; rotate: -4deg; translate: 0 -6%; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+            <img class="fill" src="5b560fc43d8d9c8da90617f38d022d11.jpg" alt="Hand-built ceramic fox mug">
+          </div>
+        </div>
+        <div class="pop" style="animation-delay: .61s; width: clamp(112px, 17vw, 250px); margin-right: -3%; position: relative; z-index: 2">
+          <div class="card" style="aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; rotate: 1.5deg; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+            <img class="fill" src="56901f50dcb00019b6767d01cf2145e1.jpg" alt="Un-Cream coffee cup straining milk skin as it pours" style="object-position: 50% 50%">
+          </div>
+        </div>
+        <div class="pop" style="animation-delay: .69s; width: clamp(88px, 13vw, 190px); margin-right: -3%">
+          <div class="card" style="aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; rotate: -3deg; translate: 0 7%; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+            <img class="fill" src="860aefe798df49855a81f60794632e6f.jpg" alt="Digital portrait study" style="object-position: 50% 25%">
+          </div>
+        </div>
+        <div class="pop" style="animation-delay: .77s; width: clamp(88px, 13vw, 190px)">
+          <div class="card" style="aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; rotate: 5deg; translate: 0 -5%; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+            <img class="fill" src="578c6694120dbdb4ab50c14db100972c.jpg" alt="Graphite portrait study" style="object-position: 50% 30%">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="disp" style="margin: 0; font-size: 90px; max-width: 11em; color: {{t.soft}}">CURIOUS ABOUT PEOPLE&nbsp;</h2>
+    </div><div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 17px; font-weight: 400"><span class="eyebrow"><span style="color: rgb(102, 102, 102); letter-spacing: 0.12em">MBA student at UC Berkeley Haas · Class of 2028</span></span>
+    </div>
+
+    
+  </section>
+
+  <section id="industrial" style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 68px 20px 26px">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+      <span class="eyebrow" style="color: {{t.soft}}">01 — Featured work</span>
+      <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">Industrial design</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 24em">Objects that solve something.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 64px 48px; width: 100%; max-width: 1160px">
+      <sc-for list="{{projects}}" as="p" hint-placeholder-count="4">
+        <article style="display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+          <a href="#top" onClick="{{p.go}}" class="proj" aria-label="{{p.label}}">
+            <img class="fill pa" src="{{p.a}}" alt="{{p.alt}}" style="object-position: {{p.pos}}">
+            <img class="fill pb" src="{{p.b}}" alt="" aria-hidden="true">
+          </a>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+            <h3 class="disp" style="margin: 0; font-size: 40px"><a href="#top" onClick="{{p.go}}">{{p.title}}</a></h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.45; max-width: 24em">{{p.tag}}</p>
+            <a href="#top" onClick="{{p.go}}" class="eyebrow ul" style="padding: 12px 4px">View case study</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">See all industrial design</a>
+  </section>
+
+  <section id="art" style="display: flex; flex-direction: column; align-items: center; gap: 52px; padding: 84px 20px 26px">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+      <span class="eyebrow" style="color: {{t.soft}}">02 — Personal practice</span>
+      <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">Art &amp; illustration</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 24em">Work that speaks in quiet rooms.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px 36px; width: 100%; max-width: 1240px; padding-bottom: 64px">
+
+      <a href="#top" onClick="{{nav.artwork}}" class="artbox" onMouseEnter="{{hover.pencil}}" aria-label="Pencil &amp; charcoal artwork" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: clamp(160px, 21vw, 270px); rotate: -6deg; translate: 0 48px">
+        <div class="card" style="position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10)">
+          <sc-for list="{{pieces.pencil}}" as="p" hint-placeholder-count="3">
+            <img class="fill pc" src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="opacity: {{p.op}}">
+          </sc-for>
+        </div>
+        <span class="disp" style="font-size: 26px; line-height: 1; text-align: center">Pencil &amp; charcoal</span>
+      </a>
+
+      <a href="#top" onClick="{{nav.artwork}}" class="artbox" onMouseEnter="{{hover.digital}}" aria-label="Digital artwork" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: clamp(160px, 21vw, 270px); rotate: -2deg; translate: 0 8px">
+        <div class="card" style="position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10)">
+          <sc-for list="{{pieces.digital}}" as="p" hint-placeholder-count="3">
+            <img class="fill pc" src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="opacity: {{p.op}}">
+          </sc-for>
+        </div>
+        <span class="disp" style="font-size: 26px; line-height: 1; text-align: center">Digital</span>
+      </a>
+
+      <a href="#top" onClick="{{nav.artwork}}" class="artbox" onMouseEnter="{{hover.paint}}" aria-label="Watercolor &amp; paint artwork" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: clamp(160px, 21vw, 270px); rotate: 2deg; translate: 0 8px">
+        <div class="card" style="position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10)">
+          <sc-for list="{{pieces.paint}}" as="p" hint-placeholder-count="3">
+            <img class="fill pc" src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="opacity: {{p.op}}">
+          </sc-for>
+        </div>
+        <span class="disp" style="font-size: 26px; line-height: 1; text-align: center">Watercolor &amp; paint</span>
+      </a>
+
+      <a href="#top" onClick="{{nav.artwork}}" class="artbox" onMouseEnter="{{hover.pottery}}" aria-label="Pottery artwork" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: clamp(160px, 21vw, 270px); rotate: 6deg; translate: 0 48px">
+        <div class="card" style="position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10)">
+          <sc-for list="{{pieces.pottery}}" as="p" hint-placeholder-count="3">
+            <img class="fill pc" src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="opacity: {{p.op}}">
+          </sc-for>
+        </div>
+        <span class="disp" style="font-size: 26px; line-height: 1; text-align: center">Pottery</span>
+      </a>
+    </div>
+
+    <a href="#top" onClick="{{nav.artwork}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">See all artwork</a>
+  </section>
+
+
+  </sc-if>
+  <sc-if value="{{v.industrial}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; padding: 44px 20px 26px">
+    <span class="eyebrow fade" style="color: {{t.soft}}">01 - FEATURED WORK</span>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em"><span class="w" style="animation-delay: .05s">Industrial</span> <span class="w" style="animation-delay: .12s">design</span></h1>
+    <p class="fade" style="margin: 0; font-size: 21px; line-height: 1.4; max-width: 26em; width: 602px; height: 52px; text-align: center">Everyday objects that make life a little easier</p>
+  </section>
+  <section style="display: flex; flex-direction: column; align-items: center; padding: 38px 20px 84px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 64px 48px; width: 100%; max-width: 1160px">
+      <sc-for list="{{projects}}" as="p" hint-placeholder-count="4">
+        <article style="display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+          <a href="#top" onClick="{{p.go}}" class="proj" aria-label="{{p.label}}">
+            <img class="fill pa" src="{{p.a}}" alt="{{p.alt}}" style="object-position: {{p.pos}}">
+            <img class="fill pb" src="{{p.b}}" alt="" aria-hidden="true">
+          </a>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+            <h3 class="disp" style="margin: 0; font-size: 40px"><a href="#top" onClick="{{p.go}}">{{p.title}}</a></h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.45; max-width: 24em">{{p.tag}}</p>
+            <a href="#top" onClick="{{p.go}}" class="eyebrow ul" style="padding: 12px 4px">View case study</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  </sc-if>
+  <sc-if value="{{v.artwork}}" hint-placeholder-val="{{false}}">
+
+
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; padding: 50px 20px 26px">
+    <span class="eyebrow fade" style="color: {{t.soft}}">02 - ART &amp; ILLUSTRATION</span>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em">artwork</h1>
+    <p class="fade" style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 28em">Exploring different forms one at a time-<br>Graphite, pencil sketch, ink, watercolor, acrylic, pixels and clay</p>
+  </section>
+
+  <section style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 28px clamp(16px, 4vw, 48px) 84px">
+    <div role="group" aria-label="Filter artwork by medium" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
+      <sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+        <button type="button" class="pill eyebrow" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; cursor: pointer; font-size: 13px; border: 1.5px solid currentColor; background: {{f.bg}}; color: {{f.fg}}">
+          <span>{{f.label}}</span>
+          <span style="opacity: .7">{{f.count}}</span>
+        </button>
+      </sc-for>
+    </div>
+
+    <div style="width: 100%; max-width: 1360px; column-width: 280px; column-gap: 20px">
+      <sc-for list="{{items}}" as="it" hint-placeholder-count="8">
+        <figure class="work" style="margin: 0 0 40px; break-inside: avoid; display: flex; flex-direction: column; gap: 14px">
+          <img src="{{it.src}}" alt="{{it.alt}}" loading="lazy" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.09)">
+          <figcaption style="display: flex; flex-direction: column; gap: 4px">
+            <span class="disp" style="font-size: 21px; line-height: 1">{{it.title}}</span>
+            <span class="eyebrow" style="font-size: 11px; color: {{t.soft}}">{{it.medium}}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+
+  </sc-if>
+  <sc-if value="{{v.digital}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="min-height: 760px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 56px; text-align: center; padding: 58px 20px 70px">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 18px">
+      <span class="eyebrow fade" style="color: {{t.soft}}">03 — New chapter</span>
+      <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em"><span class="w" style="animation-delay: .05s">Digital</span> <span class="w" style="animation-delay: .12s">products</span></h1>
+      <p class="fade" style="margin: 0; font-size: 18px; line-height: 1.4; max-width: 26em; width: 533px; height: 73px">Work in progress.&nbsp;Building digital products with the same attention to detail</p>
+    </div>
+    <div style="width: 100%; max-width: 980px; aspect-ratio: 16 / 7; border-radius: 22px; border: 1.5px dashed {{t.line}}; display: grid; place-items: center; box-sizing: border-box; padding: 18px">
+      <span class="eyebrow" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border: 1.5px solid currentColor; border-radius: 999px">Case studies coming soon</span>
+    </div>
+  </section>
+
+  </sc-if>
+  <sc-if value="{{v.about}}" hint-placeholder-val="{{false}}">
+
+
+  <section id="top" class="ab-hero" style="position: relative; width: 1419px; max-width: 1440px; margin-left: auto; margin-right: auto; box-sizing: border-box; min-height: 600px; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; align-items: center; gap: 26px; text-align: center; padding: 48px 20px 16px; height: 501px">
+    
+
+    <h2 class="disp ab-h2" style="margin: 0; font-size: clamp(50px, 7vw, 72px); max-width: 11em; color: {{t.soft}}; position: absolute; left: 385px; top: 131px; text-align: justify; height: 58px; width: 257px">&amp; BUILDER</h2><h1 class="disp ab-h1" style="margin: 0; font-size: clamp(28px, 7vw, 56px); max-width: 11em; position: absolute; text-align: right; left: 293px; top: 79px; width: 418px; height: 45px"><span class="w" style="animation-delay: 0.05s">Engineer, Designer</span></h1><div class="ab-wrap" style="display: flex; flex-direction: column; align-items: center; gap: clamp(20px, 3vw, 38px); width: 100%">
+      
+      <div class="pop ab-photo" style="animation-delay: .4s; width: 360px; position: absolute; left: 836px; top: 40px; height: 536px">
+        <div class="card" style="aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; rotate: 2deg; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+          <img class="fill" src="bcf160887d096599d019745a72d7450e.jpg" alt="Swati smiling in front of the Golden Gate Bridge" style="object-position: 50% 50%">
+        </div>
+      </div>
+      
+    </div><div class="ab-link" style="display: flex; align-items: center; gap: 12px; position: absolute; left: 368px; top: 240px"><a href="78b2489ac07fd8c8cffad8e64c80517c.pdf" download="Swati_Sheenum_Resume.pdf" target="_blank" rel="noopener" class="pill eyebrow" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg>Download resume</a><a href="https://linkedin.com/in/swati-sheenum" target="_blank" rel="noopener" aria-label="Swati on LinkedIn" title="LinkedIn" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="display:block"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div><div class="ab-p" style="margin: 0; font-size: 18px; line-height: 1.45; width: 578px; text-align: justify; position: absolute; left: 215px; top: 317px; height: 206px"><span>I'm Swati. I love uncovering why people do what they do, and turning those insights into better, more <i>human</i> products.<br></span><br>I’ve worked across manufacturing, consumer research, and product development and taken ideas from user interviews to launch.<br><br>Now at Berkeley Haas, I’m exploring the intersection of technology and design to build products people love and can’t imagine living without.<span><br><br><br></span></div>
+
+    <div class="fade ab-mba" style="display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 30em; position: absolute; left: 304px; top: 205px; width: 413px"><span class="eyebrow" style="font-size: 15px">Now an MBA student at UC Berkeley Haas</span>
+    </div>
+  </section>
+
+  
+
+  <section style="display: flex; flex-direction: column; align-items: center; gap: 64px; padding: 40px 20px 24px; text-align: start; position: relative">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+      <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">My journey so far</h2>
+    </div>
+    <div class="lane" style="position:relative; width:100%; max-width:1160px; height:330px; margin:-8px 0 -18px; text-align:start">
+      <div class="walker" style="position:absolute; bottom:12px; width:190px; margin-left:-95px; height:330px; z-index:2">
+                <div style="position:absolute; left:0; right:0; bottom:0px; height:311px">
+          <div style="position:relative; width:190px; height:311px">
+            <div class="wkbob" style="position:absolute; left:0; top:0; width:190px; height:311px"><img class="wkc wkc0" src="2f2e58a0445e889f05761d152492e7e6.png" alt="Swati as an engineering student at IIT Madras, iced coffee and tote bag" style="position:absolute; left:50%; bottom:0; height:311px; width:auto; margin-left:-64px"><img class="wkc wkc1" src="5813580e3301c3319e1b0dc0c741fb25.png" alt="Swati in P&amp;G Pampers coveralls holding a wrench" style="position:absolute; left:50%; bottom:0; height:311px; width:auto; margin-left:-64px"><img class="wkc wkc2" src="36fbae307d5dc2e82da1ecce586f2b2f.png" alt="Swati in a lab coat as an R&amp;D scientist on Whisper, notebook in hand" style="position:absolute; left:50%; bottom:0; height:311px; width:auto; margin-left:-64px"><img class="wkc wkc3" src="33360a18902a53f94b4d39a63d502948.png" alt="Swati today, an MBA candidate at Berkeley Haas" style="position:absolute; left:50%; bottom:0; height:311px; width:auto; margin-left:-64px"></div>
+          </div>
+        </div>
+        <div class="wksh" style="position:absolute; left:50%; bottom:2px; width:110px; height:12px; margin-left:-55px; border-radius:50%; background:radial-gradient(closest-side, rgba(0,0,0,.26), rgba(0,0,0,0))"></div>
+      </div>
+    </div>
+    <div class="wk" style="position:relative; width:100%; max-width:1160px">
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px; width: 100%; max-width: 1160px">
+      <li class="step wk-c0" style="display: flex; flex-direction: column; gap: 13px; padding: 20px 18px; border-radius: 22px; background: {{t.ph}}; color: {{t.ink}}; rotate: -1.5deg">
+        <div style="display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; background: #FFFFFF"><img src="f8d59100067703cf6bdeb5d5221b0f2e.png" alt="IIT Madras logo" style="height: 52px; width: auto"></div>
+        <span class="eyebrow" style="text-align: center; font-size: 17px">2018 - 2022</span>
+        <span class="disp" style="font-size: 38px; text-align: center">IIT Madras</span>
+        <span style="font-size: 17px; line-height: 1.4; text-align: center">Bachelor of Technology<br>Electrical Engineering</span>
+      </li>
+      <li class="step wk-c1" style="display: flex; flex-direction: column; gap: 13px; padding: 20px 18px; border-radius: 22px; background: {{t.ph}}; color: {{t.ink}}; rotate: 1deg">
+        <div style="display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; background: #FFFFFF"><img src="da4844655e199583405ff69e30a998e9.png" alt="Pampers logo" style="height: 48px; width: auto"></div>
+        <span class="eyebrow" style="text-align: center; font-size: 17px">2022 - 2024</span>
+        <span class="disp" style="font-size: 38px; text-align: center">P&amp;G Pampers</span>
+        <span style="font-size: 18px; line-height: 1.4; text-align: center">Line Leader - Product Supply</span>
+      </li>
+      <li class="step wk-c2" style="display: flex; flex-direction: column; gap: 13px; padding: 20px 18px; border-radius: 22px; background: {{t.ph}}; color: {{t.ink}}; rotate: -1deg">
+        <div style="display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; background: #FFFFFF"><img src="d88b382e8a8e274e328c2bf6a73d17f6.png" alt="Whisper logo" style="height: 32px; width: auto"></div>
+        <span class="eyebrow" style="text-align: center; font-size: 17px">2024 - 2026</span>
+        <span class="disp" style="font-size: 38px; text-align: center">P&amp;G Whisper</span>
+        <span style="font-size: 18px; line-height: 1.4; text-align: center">Scientist | R&amp;D</span>
+      </li>
+      <li class="step wk-c3" style="display: flex; flex-direction: column; gap: 13px; padding: 20px 18px; border-radius: 22px; background: {{t.ph}}; color: {{t.ink}}; rotate: 1.5deg">
+        <div style="display: flex; align-items: center; justify-content: center; height: 72px; border-radius: 14px; background: #FFFFFF"><img src="c8772705cbf49d302ac1554d7403e625.png" alt="UC Berkeley logo" style="height: 56px; width: auto"></div>
+        <span class="eyebrow" style="text-align: center; font-size: 17px">2026 - 2028</span>
+        <span class="disp" style="font-size: 38px; text-align: center">Berkeley Haas</span>
+        <span style="font-size: 18px; line-height: 1.4; text-align: center">MBA</span>
+      </li>
+    </ol>
+    </div>
+  </section>
+
+  
+
+  
+
+
+  </sc-if>
+  <sc-if value="{{v.uncream}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding: 38px 20px 26px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+      <a href="#top" onClick="{{nav.industrial}}" class="eyebrow ul" style="padding: 8px 4px">Industrial design</a>
+      <span class="eyebrow" style="color: {{t.soft}}">Project 01</span>
+    </div>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Un-Cream</span> </h1>
+    <p class="fade" style="margin: 0; font-size: 19px; line-height: 1.35; max-width: 24em; color: {{t.soft}}">A coffee cup that skims the milk skin.</p>
+    <div class="pop card" style="animation-delay: .35s; width: 100%; max-width: 1040px; aspect-ratio: 16 / 10; border-radius: 26px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="56901f50dcb00019b6767d01cf2145e1.jpg" alt="Un-Cream coffee cup straining milk skin as it pours" style=""></div>
+    <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
+      <p style="margin: 0; font-size: 18px; line-height: 1.5">Built for the Indian household where un-homogenized milk forms a film of milk-skin (malai or chaali).</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Form</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 · Sketching · CAD</span></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 44px 20px 72px">
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">01 - BACKSTORY</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Milk that grows a skin</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">India is the world’s largest producer of milk, and most of it does not reach homes homogenized and pasteurized.<br><br>Milk is boiled in an open pot every morning.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">What cools on top is a wrinkled, off-putting film of fat and protein called “malai”. And kids absolutely hate it.</p>
+        </div>
+      </div>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 820px"><div class="pairgrid"><a href="0dce3d9d204e0434c4dec91b9409a48a.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="0dce3d9d204e0434c4dec91b9409a48a.jpg" alt="A mug of boiled coffee with a wrinkled skin of malai across the surface" style="display: block; width: 100%; height: 100%; object-fit: cover"></a><a href="2fd260ab58f9e4b4321f171c0570a331.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="2fd260ab58f9e4b4321f171c0570a331.jpg" alt="A spoon lifting a thick sheet of malai off the milk" style="display: block; width: 100%; height: 100%; object-fit: cover"></a></div><figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center"><i>MALAI</i> OR MILK SKIN</figcaption></figure>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">02 - BRIEF</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Enjoy the drink, skip the malai</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">How do we let people enjoy boiled coffee, chai, or hot chocolate, without ever meeting the malai?</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The answer had to slip into existing morning rituals, not replace them. Take-away friendly. Dishwasher-safe. Cheap enough to be unremarkable.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+        <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic">“The dreaded malai, and the calcium deficiency it quietly creates.”</blockquote>
+      </div>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">03 - IDEATION</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Scrape, hinge, sieve</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">I sketched three mechanisms. <br>The sieve was the best option: fewer parts, no springs, easy to clean.</p>
+        </div>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 15px">
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -1.2deg"><span class="eyebrow" style="color: {{t.soft}}">01</span><span class="disp" style="font-size: 32px">Scrape</span><span style="font-size: 15px; line-height: 1.4">A sliding scraper that lifts the film off</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: 0.8deg"><span class="eyebrow" style="color: {{t.soft}}">02</span><span class="disp" style="font-size: 32px">Hinge</span><span style="font-size: 15px; line-height: 1.4">A hinged flap that traps it against the lid</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -0.6deg"><span class="eyebrow" style="color: {{t.soft}}">03</span><span class="disp" style="font-size: 32px">Sieve</span><span style="font-size: 15px; line-height: 1.4">A stainless steel sieve that lets the liquid through and holds the film back</span></li>
+      </ol>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; width: 100%"><a href="5fc7fc307b2507520af6e01fb0167e2a.jpg" target="_blank" rel="noopener" aria-label="Open the ideation board full size" style="display: block; width: 100%; border-radius: 22px; overflow: hidden; background: #FFFFFF; border: 1.5px solid {{t.line}}; box-shadow: 0 9px 21px rgba(0,0,0,.08), 0 38px 38px rgba(0,0,0,.06)"><img src="5fc7fc307b2507520af6e01fb0167e2a.jpg" alt="Ideation board comparing three ways to hold back the milk skin: a pull-back scraper, a hinged sieve across the cup, and a sieve set into the lid" style="display: block; width: 100%; height: auto"></a></figure>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">04 - RESULT</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">A cup with a snap-on mesh</h2>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5">Cup with a snap-on stainless steel mesh.</p><div style="display: flex; flex-direction: column; gap: 15px">
+          
+        </div>
+      </div>
+      <div class="ucgrid">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px">
+        <div class="card" style="width: 100%; aspect-ratio: 1 / 1; border-radius: 22px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="44d514a7950512bf86a0e0104fd390bc.jpg" alt="Un-Cream cup with the stainless steel strainer, exploded" style=""></div>
+        <figcaption class="eyebrow" style="color: {{t.soft}}">Final 3D model made using Fusion 360</figcaption>
+      </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; width: 100%"><a href="c3f1c99a0fdb043d68429b431ac96654.jpg" target="_blank" rel="noopener" aria-label="Open full size" style="display: block; width: 100%; border-radius: 22px; overflow: hidden; background: #FFFFFF; border: 1.5px solid {{t.line}}; box-shadow: 0 9px 21px rgba(0,0,0,.08), 0 38px 38px rgba(0,0,0,.06)"><img src="c3f1c99a0fdb043d68429b431ac96654.jpg" alt="The finished Un-Cream cup, the lid with its stainless steel mesh, and a macro view of the mesh weave" style="display: block; width: 100%; height: auto"></a><figcaption class="eyebrow" style="color: {{t.soft}}">The finished cup, and the stainless steel mesh up close. Tap to enlarge.</figcaption></figure>
+      </div>
+    </section>
+
+    <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
+      <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
+      <a href="#top" onClick="{{nav.tumble}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 02 Tumble &amp; Learn →</a>
+    </nav>
+  </div>
+  </sc-if>
+  <sc-if value="{{v.tumble}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding: 38px 20px 26px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+      <a href="#top" onClick="{{nav.industrial}}" class="eyebrow ul" style="padding: 8px 4px">Industrial design</a>
+      <span class="eyebrow" style="color: {{t.soft}}">Project 02</span>
+    </div>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Tumble</span> <span class="w" style="animation-delay: 0.12s">&amp;</span> <span class="w" style="animation-delay: 0.19s">Learn</span> </h1>
+    <p class="fade" style="margin: 0; font-size: 19px; line-height: 1.35; max-width: 24em; color: {{t.soft}}">A gentle first bump for a brand-new crawler.</p>
+    <div class="pop card" style="animation-delay: .35s; width: 100%; max-width: 1040px; aspect-ratio: 16 / 10; border-radius: 26px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="b2bba3112582722dc509303d29f0f4fd.jpg" alt="Smiling baby sitting on a rug wearing the soft helmet" style=""></div>
+    <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
+      <p style="margin: 0; font-size: 18px; line-height: 1.5">A baby helmet that swaps non-biodegradable styrofoam for biodegradable air cushions, cutting helmet weight by 40%.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Sustainability · CMF</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 · Soft goods · Material research</span></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 44px 20px 72px">
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">01 - THE PROBLEM</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">The runway starts the day they crawl</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 572px; height: 103px">The moment a baby pushes up onto their hands and knees, the floor becomes a runway, and every coffee-table corner becomes a problem. Some children also self-soothe by head-banging into furniture and floors.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">Parents are left to choose between bubble-wrapping their living room and watching every second.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+        <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic">“The moment they start crawling, the floor becomes a runway.”</blockquote>
+        <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic">“Head-banging is how some children learn to self-soothe.”</blockquote>
+      </div>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">02 - MARKET RESEARCH</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">PROTECTIVE. LIGHT.&nbsp;</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 563px; height: 73px">Existing baby helmets are either rigid plastic shells borrowed from cycling, or bulky bonnets stuffed with EPS foam. They’re hot, heavy, and ugly enough that most parents quietly give up on them.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The brief: design something a baby will actually wear, and a parent will actually put on.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+        
+      </div>
+      
+    </section>
+    <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic"><b>Market scan</b>: rigid plastic shells and un-sustainable bulky styrofoam bonnets.</blockquote><figure style="margin: 0; display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 720px; justify-content: center"><div class="pairgrid"><a href="d09e4f31a582e592db1f0d8df0f80e55.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 3 / 4; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="d09e4f31a582e592db1f0d8df0f80e55.jpg" alt="A baby wearing a rigid blue plastic helmet shell" style="display: block; width: 100%; height: 100%; object-fit: cover"></a><a href="9caaf777724342bb8190e41248f7f805.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 3 / 4; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="9caaf777724342bb8190e41248f7f805.jpg" alt="A baby wearing a bulky padded fabric bonnet helmet" style="display: block; width: 100%; height: 100%; object-fit: cover"></a></div></figure><section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">03 — Design approach</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Shredded jute, sandwiched</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Instead of one solid block of EPS foam, I designed a central cushion layer of finely shredded jute- light, sustainable, and surprisingly good at absorbing impact, sandwiched between a bio-based plant polymer outer shell and an organic cotton inner lining.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The jute is encapsulated in a thin cotton layer so it stays soft against the skin and breathes through the shell vents.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 22px">
+        <div style="display: flex; flex-direction: column; gap: 10px"><span class="disp" style="font-size: clamp(44px, 5vw, 70px)">40%</span><span class="eyebrow">Lighter than a regular helmet</span></div>
+      </div>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; align-items: center">
+        <div class="card" style="width: 100%; max-width: 900px; aspect-ratio: 4 / 3; border-radius: 22px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="e52d32d27f7bc4918ce121869407b9f3.jpg" alt="Exploded view of the helmet: bio-based outer shell, cotton lining, shredded jute cushion, encapsulation, padding and chin strap" style="object-fit: contain"></div>
+        <figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">Exploded view: bio-based outer shell, cotton lining, shredded jute cushion, encapsulation, padding, and chin strap</figcaption>
+      </figure>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Final Design</h2>
+        </div>
+        <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 372px; height: 46px">The final form is a soft shell in playful prints: dinosaurs, clouds, a tiny galaxy.</p><div style="display: flex; flex-direction: column; gap: 15px">
+          
+          
+        </div>
+      </div>
+      
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; width: 100%"><a href="0126913c522fb7e64f78d2cd50344f63.jpg" target="_blank" rel="noopener" aria-label="Open full size" style="display: block; width: 100%; border-radius: 22px; overflow: hidden; background: #FFFFFF; border: 1.5px solid {{t.line}}; box-shadow: 0 9px 21px rgba(0,0,0,.08), 0 38px 38px rgba(0,0,0,.06)"><img src="0126913c522fb7e64f78d2cd50344f63.jpg" alt="Three orthographic views of the Tumble &amp; Learn helmet shell in a dinosaur print, with an angled render of the shell" style="display: block; width: 100%; height: auto"></a><figcaption class="eyebrow" style="color: {{t.soft}}; font-size: 16px; text-align: end">MODELLED IN FUSION 360</figcaption></figure>
+    </section>
+
+    <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
+      <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
+      <a href="#top" onClick="{{nav.safetolls}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 03 Safe Tolls →</a>
+    </nav>
+  </div>
+  </sc-if>
+  <sc-if value="{{v.safetolls}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding: 38px 20px 26px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+      <a href="#top" onClick="{{nav.industrial}}" class="eyebrow ul" style="padding: 8px 4px">Industrial design</a>
+      <span class="eyebrow" style="color: {{t.soft}}">Project 03</span>
+    </div>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Safe</span> <span class="w" style="animation-delay: 0.12s">Tolls</span> </h1>
+    <p class="fade" style="margin: 0; font-size: 19px; line-height: 1.35; max-width: 24em; color: {{t.soft}}">A contact-free breath analyzer for the COVID era.</p>
+    <div class="pop card" style="animation-delay: .35s; width: 100%; max-width: 1040px; aspect-ratio: 16 / 10; border-radius: 26px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="859c297dcc6d03e728f96eacaeae1596.jpg" alt="Safe Tolls breath analyzer mounted in a toll booth window" style="object-position: 72% 50%"></div>
+    <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
+      <p style="margin: 0; font-size: 18px; line-height: 1.5">Drunk driving accounts for a startling share of the 6,871 accidents a year on the Old Mahabalipuram Road, one of the busiest highways in Chennai. <br><br>Safe Tolls turns the breath analyser into a contactless dispenser with a single-use breath pouch</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Mechanism · Public safety</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: rgb(102, 102, 102)">Tools</span><span class="eyebrow">Mechanism design · chemistry · Sketching</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 44px 20px 72px">
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">01 - THE ROAD</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">OLD MAHABALIPURAM ROAD (OMR), CHENNAI</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">OMR Chennai is home to 480 IT companies and 132 hospitals, and it sees roughly 6,871 reported accidents every year. A disproportionate share of those involve alcohol.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The existing breathalyzer with mouthpiece used during police checks were completely halted during COVID due to its close-contact nature.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 22px">
+        <div style="display: flex; flex-direction: column; gap: 10px"><span class="disp" style="font-size: clamp(44px, 5vw, 70px)">480</span><span class="eyebrow">IT companies</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px"><span class="disp" style="font-size: clamp(44px, 5vw, 70px)">132</span><span class="eyebrow">Hospitals</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px"><span class="disp" style="font-size: clamp(44px, 5vw, 70px)">6,871</span><span class="eyebrow">Accidents a year</span></div>
+      </div>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">02 - THE PROPOSAL</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">A contact-free test at every toll</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Mandate an alcohol test at every toll plaza on OMR, but make it contact-free. No shared mouthpieces. No police officer in the driver’s breath path.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The user experience needed to feel less like a checkpoint and more like buying a vending-machine snack.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+        <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic">“The proposal: alcohol testing built into the toll-plaza ritual.”</blockquote>
+      </div>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">03 - HOW IT WORKS</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Pick up. Blow. Seal. Drop.</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">I designed a candy-style dispenser that hands the driver a sealed balloon. They blow into it, seal it, and drop it back through a chute.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">Inside, a hot prick pops the balloon over a platinum electrode bath; the change in current tells you how much ethanol the breath carried. A UV chamber sterilizes everything between cycles.</p>
+        </div>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 15px">
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -1.2deg"><span class="eyebrow" style="color: {{t.soft}}">01</span><span class="disp" style="font-size: 32px">Pick up</span><span style="font-size: 15px; line-height: 1.4">Take a sealed balloon from the dispenser</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: 0.8deg"><span class="eyebrow" style="color: {{t.soft}}">02</span><span class="disp" style="font-size: 32px">Blow</span><span style="font-size: 15px; line-height: 1.4">Breathe into it, no mouthpiece shared</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -0.6deg"><span class="eyebrow" style="color: {{t.soft}}">03</span><span class="disp" style="font-size: 32px">Seal</span><span style="font-size: 15px; line-height: 1.4">Close the balloon</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: 1deg"><span class="eyebrow" style="color: {{t.soft}}">04</span><span class="disp" style="font-size: 32px">Drop</span><span style="font-size: 15px; line-height: 1.4">Return it through the chute</span></li>
+      </ol>
+      <div class="ucgrid" style="align-items: center">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; width: 100%">
+          <a href="ab59d96daf9b6b085b19be402e443100.png" target="_blank" rel="noopener" aria-label="Open full size" style="display: block; width: 100%; border-radius: 22px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="ab59d96daf9b6b085b19be402e443100.png" alt="Illustration of a toll booth with the Safe Tolls dispenser and the four steps: pick up, blow, seal, drop" style="display: block; width: 100%; height: auto"></a>
+          <figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">The toll-booth flow. Tap to enlarge.</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; width: 100%">
+          <a href="c729a369a9fd24bae85e8fc6ed9c558a.png" target="_blank" rel="noopener" aria-label="Open full size" style="display: block; width: 100%; border-radius: 22px; overflow: hidden; background: #FFFFFF; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img src="c729a369a9fd24bae85e8fc6ed9c558a.png" alt="Cutaway of the analyzer: hot prick, acid electrolyte, platinum electrodes, processor and the rotating UV sterilizer chamber, with three numbered steps" style="display: block; width: 100%; height: auto"></a>
+          <figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">Inside the analyzer. Tap to enlarge.</figcaption>
+        </figure>
+      </div>
+      
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">04 - OUTCOME</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Contactless, and it fits the booth</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">The mechanism is fully contactless, single-use, and designed to fit into a standard toll-booth footprint.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 18px">
+        <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic">“Safe Tolls, reducing accidents due to human error on OMR.”</blockquote>
+      </div>
+    </section>
+
+    <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
+      <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
+      <a href="#top" onClick="{{nav.xeyense}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 04 Xeyense →</a>
+    </nav>
+  </div>
+
+  </sc-if>
+  <sc-if value="{{v.xeyense}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding: 38px 20px 26px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+      <a href="#top" onClick="{{nav.industrial}}" class="eyebrow ul" style="padding: 8px 4px">Industrial design</a>
+      <span class="eyebrow" style="color: {{t.soft}}">Project 04</span>
+    </div>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Xeyense</span> </h1>
+    <p class="fade" style="margin: 0; font-size: 19px; line-height: 1.35; max-width: 24em; color: {{t.soft}}">A pantry jar that knows what it’s holding.</p>
+    <div class="pop card" style="animation-delay: .35s; width: 100%; max-width: 1040px; aspect-ratio: 16 / 10; border-radius: 26px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="ab780ff2cde9fc9cb4052d607c983910.jpg" alt="Xeyense frosted pantry jar with a camera lid, filled with granola" style=""></div>
+    <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
+      <p style="margin: 0; font-size: 18px; line-height: 1.5">A smart container with a load cell at the base and a tiny camera in the lid. Computer vision identifies what you’ve poured in; a companion app keeps a running log of what you’ve consumed today.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · IoT · Computer vision</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Hardware · Embedded ML · App design</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 44px 20px 72px">
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">01 - THE IDEA</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Track what you eat, without tracking what you eat</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Calorie apps fail because logging is a chore. Xeyense moves the logging into the container itself.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">A load cell at the base measures weight changes, a camera in the lid recognises the contents on refill, and a companion app quietly keeps the daily ledger for you.</p>
+        </div>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 15px">
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -1.2deg"><span class="eyebrow" style="color: {{t.soft}}">01</span><span class="disp" style="font-size: 32px">Load cell</span><span style="font-size: 15px; line-height: 1.4">At the base, measures weight changes</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: 0.8deg"><span class="eyebrow" style="color: {{t.soft}}">02</span><span class="disp" style="font-size: 32px">Camera</span><span style="font-size: 15px; line-height: 1.4">In the lid, recognises the contents on refill</span></li>
+        <li style="display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 20px; background: {{t.ph}}; rotate: -0.6deg"><span class="eyebrow" style="color: {{t.soft}}">03</span><span class="disp" style="font-size: 32px">Companion app</span><span style="font-size: 15px; line-height: 1.4">Keeps the daily ledger for you</span></li>
+      </ol>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 13px; align-items: center">
+        <div class="card" style="width: 100%; max-width: 760px; aspect-ratio: 4 / 3; border-radius: 22px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)"><img class="fill" src="9b04e9f9838d3c93c112c07b922f0698.jpg" alt="Close-up of the Xeyense lid with its camera" style=""></div>
+        <figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">Xeyense with a load cell at the base, camera in the lid, and companion app on your phone</figcaption>
+      </figure>
+    </section>
+
+    <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
+      <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
+      <a href="#top" onClick="{{nav.uncream}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 01 Un-Cream →</a>
+    </nav>
+  </div>
+
+  </sc-if>
+
+  <sc-if value="{{v.about}}" hint-placeholder-val="{{false}}">
+  <section style="display: flex; flex-direction: column; align-items: center; padding: 48px 20px 0; margin-bottom: -40px">
+    <div style="width: 100%; max-width: 1160px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px">
+
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <h2 class="disp" style="margin: 0; font-size: 48px">Experience</h2>
+        <div style="display: flex; flex-direction: column">
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}">
+            <span class="eyebrow">2024 — 2026</span>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Whisper</span>
+              <span style="font-size: 15px; line-height: 1.4">Scientist, R&amp;D</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Led 0-1 product development for P&amp;G Whisper’s 1st locally designed and manufactured product (Disposable Period Underwear) in India&nbsp;</li><li>Translated in-depth consumer research into a product built specifically for the needs of Indian women while navigating a supply-chain crisis</li><li>Partnered with marketing/legal to shape claims and messaging the product could genuinely stand behind, turning consumer research into a GTM launch that resonated with users</li></ul>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="d88b382e8a8e274e328c2bf6a73d17f6.png" alt="Whisper" style="height: 20px; width: auto"></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}">
+            <span class="eyebrow">2022 — 2024</span>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Pampers</span>
+              <span style="font-size: 15px; line-height: 1.4">Product Supply Manager | Line Leader</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Led a 14-person Pampers manufacturing line team through a results turnaround.</li><li>Built digital tools adopted across the manufacturing plant, including Pampers India’s 1st barcode verification system, which helped eliminate “wrong-product” complaints and a predictive maintenance dashboard reducing repeat breakdowns 20%.</li></ul>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="da4844655e199583405ff69e30a998e9.png" alt="Pampers" style="height: 32px; width: auto"></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}; border-bottom: 1.5px solid {{t.line}}">
+            <span class="eyebrow">2021</span>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Oral-B Tech Hub</span>
+              <span style="font-size: 15px; line-height: 1.4">Product Supply Intern</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Built a PowerBI annual-planning dashboard with 90% forecast accuracy. Re-applied the dashboard to Oral-B’s Tech Hub team in China. Co-created the first end-to-end supply-chain tracking tool, hitting 100% adoption within 2 months.</li></ul>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="37bf83e281bb69a62325a99cd52322b8.png" alt="Oral-B" style="height: 20px; width: auto"></div>
+          </div>
+        </div>
+      </div>
+<section style="display: flex; flex-direction: column; align-items: center; padding: 0 20px 40px; margin-top: -28px; grid-column: 1 / -1; width: 100%; box-sizing: border-box">
+    <div style="width: 100%; max-width: 1160px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 40px 32px; border-top: 1.5px solid {{t.line}}; padding-top: 26px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span class="disp" style="font-size: 64px">$15M+</span>
+        <span class="eyebrow">Revenue growth influenced at P&amp;G</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span class="disp" style="font-size: 64px">58%</span>
+        <span class="eyebrow">Repeat-rate lift on Whisper Period Panty</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span class="disp" style="font-size: 64px">100+</span>
+        <span class="eyebrow">Consumer immersions led</span>
+      </div>
+      </div>
+  </section>
+
+    </div>
+  </section>
+  </sc-if><footer style="container-type: inline-size; background: {{t.ground}}; color: {{t.ink}}; border-top: 1.5px solid {{t.line}}; transition: background .6s ease, color .6s ease; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 52px 0 26px; text-align: center; overflow: hidden">
+    <span class="eyebrow">Let’s build some great products together!</span>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:18px">
+      <span class="eyebrow" style="color: {{t.soft}}">Contact</span>
+      <nav aria-label="Contact" style="display:flex; align-items:center; gap:16px">
+        <a class="icon ct" href="https://linkedin.com/in/swati-sheenum" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="display:block"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+        <a class="icon ct" href="mailto:sheenum.swati@gmail.com" target="_blank" rel="noopener" aria-label="Email" title="Email" style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7.5 12 13.5l8.5-6"></path></svg></a>
+      </nav>
+      <a href="#top" onClick="{{nav.top}}" class="eyebrow ul" style="padding: 8px 4px">Back to top</a>
+    </div>
+    <div class="disp" aria-hidden="true" style="font-size: 40cqi; line-height: .8; letter-spacing: -0.04em; color: {{t.ph}}; margin-top: 24px; user-select: none">Swati</div>
+    <small class="eyebrow" style="font-size: 11px">© 2026 Swati Sheenum</small>
+  </footer>
+
+</div>
+<helmet><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&amp;display=swap"></helmet></x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["White","Black","Burgundy","Blue","Pink"],"default":"White"},"$preview":{"width":1440,"height":5800}}'>
+const THEMES = [
+  { id: 'White', ground: '#FFFFFF', ink: '#1E1E1E', soft: '#666666', line: 'rgba(30,30,30,.25)', ph: '#F1F1F1' },
+  { id: 'Black', ground: '#121212', ink: '#F5F5F5', soft: '#A8A8A8', line: 'rgba(245,245,245,.35)', ph: '#262626' },
+  { id: 'Burgundy', ground: '#6E1423', ink: '#FBEFEF', soft: '#EDBCC4', line: 'rgba(251,239,239,.4)', ph: '#862A3A' },
+  { id: 'Blue', ground: '#1D3A8A', ink: '#F2F5FF', soft: '#B3C4F7', line: 'rgba(242,245,255,.4)', ph: '#2C4BA0' },
+  { id: 'Pink', ground: '#F9D6E0', ink: '#3B1220', soft: '#8A3550', line: 'rgba(59,18,32,.3)', ph: '#F3BFCF' }
+];
+const CATS = [
+  { id: 'all', label: 'All' },
+  { id: 'pencil', label: 'Pencil & charcoal' },
+  { id: 'digital', label: 'Digital' },
+  { id: 'paint', label: 'Watercolor & paint' },
+  { id: 'pottery', label: 'Pottery' }
+];
+const MEDIUM = { pencil: 'Pencil, charcoal & ink', digital: 'Digital', paint: 'Watercolor & paint', pottery: 'Ceramic' };
+const W = [
+  ['paint', '474decc7880d2a09fba55973f4a1b01d.jpg', 'Colour portrait', 'Colour-block portrait painting'],
+  ['pencil', '578c6694120dbdb4ab50c14db100972c.jpg', 'Girl in the pearl earrings', 'Graphite portrait study'],
+  ['pottery', '5b560fc43d8d9c8da90617f38d022d11.jpg', 'Fox Coffee Mug', 'Hand-built ceramic fox mug'],
+  ['digital', '860aefe798df49855a81f60794632e6f.jpg', 'Frida Kahlo', 'Digital portrait study'],
+  ['paint', 'e6200c6fe37beb00836d95aba6b64f76.jpg', 'Rainy Evening', 'Ink-wash street scene with umbrellas'],
+  ['pottery', 'fc68e939792145e55e52d51b49ed0f20.jpg', 'Penguin Coffee Cup', 'Hand-built ceramic penguin cup'],
+  ['pencil', 'eb930089d86554c25dcc0453677ee8c0.jpg', 'Bat (Inktober)', 'Pencil sketch for Inktober'],
+  ['digital', '798ea24829f810f8d41c2242d757ea62.jpg', 'Crystal (Inktober)', 'Digital crystal crown illustration'],
+  ['paint', '78ca90bced82f907cedb14ab2df82d20.jpg', 'Behind the fence', 'Watercolor portrait seen through a wire fence'],
+  ['pottery', 'e24b0ccc8cdbdd219978f005652c780f.jpg', 'Daisy Jewelry Holder', 'Ceramic daisy dish'],
+  ['pencil', '28ac05d760532ba4fbaf75309a623f84.jpg', 'LA', 'Graphite study of hands'],
+  ['paint', '06156c2db66cc1957089d8aee251519b.jpg', 'Madhubani Art from Bihar', 'Madhubani-style painting of a woman in red'],
+  ['digital', '320e91ba3008f68479fecf97cc7d72f1.jpg', 'Suit (Inktober)', 'Digital ink sketch of a cat in a tuxedo'],
+  ['pottery', '33ad857af6057d42a0380d2d9855c10a.jpg', 'Watermelon Coffee Cup', 'Ceramic mug painted with watermelon slices'],
+  ['pencil', 'bf58d3e08ddc6b84227e567935fd6226.jpg', 'Shell', 'Graphite and charcoal shell study'],
+  ['paint', '82f3731dc0375d30fe54b17c994beb09.jpg', 'Window seat', 'Acrylic painting of an airplane window and a cup'],
+  ['digital', 'a19650e44f218d6088501ca80bb8ce96.jpg', 'Halloween', 'Digital pumpkin illustration'],
+  ['pencil', '3e8b4d9c85310399077e94981853dd37.jpg', 'Judy Hopps, Zootopia', 'Pencil sketch of a rabbit in uniform'],
+  ['paint', '85db27758452718e982073bd0d9780eb.jpg', 'Motherhood', 'Watercolor of an elephant and its calf'],
+  ['pottery', 'd92d367a87dbb84c2eaa1d4efaf568bc.jpg', 'Panda coffee cup', 'Ceramic panda holding a pocket'],
+  ['digital', 'fc364b4cf7cf2c1043e080ec5b396ac3.jpg', 'Egg carton', 'Digital sketch of an egg carton'],
+  ['pencil', '069d578d434f7518a63bb1916761f23f.jpg', 'Moana', 'Pencil sketch of a young character with a quote'],
+  ['paint', '102bd61800a1f0fcb5827b290b3022a2.jpg', 'Mt Fuji', 'Ink painting of a boat, mountains and blossoms'],
+  ['pencil', 'e4d625b85173f7bf72cafacdf55eef15.jpg', 'Sea', 'Pencil drawings of shells, a turtle and a jellyfish'],
+  ['paint', '139a67dee7dde301d19f5090f329f9d6.jpg', 'Seascape', 'Painted seascape with palm leaves and rocks'],
+  ['pencil', '0f6facb49fd307920b8cdf2a0eda8ea6.jpg', 'Egg study · 2021', 'Graphite study of an egg'],
+  ['digital', '01b898a183be1b0edf4d5598d357d5fe.jpg', 'Palm study', 'Digital line drawing of an open hand'],
+  ['paint', '73bad5b96c7261d3c1f8923390199941.jpg', 'Pondicherry', 'Painted yellow wall with a parked scooter'],
+  ['pencil', '44f88cef6a3c208ce630c441533e2601.jpg', 'Animal kingdom', 'Pen doodles of animals'],
+  ['pencil', '8fb0456060198dfb86379d2190531074.jpg', 'Panda study', 'Charcoal panda drawing next to a plush panda']
+];
+const FIRST = { pencil: '578c6694120dbdb4ab50c14db100972c.jpg', digital: '860aefe798df49855a81f60794632e6f.jpg', paint: '474decc7880d2a09fba55973f4a1b01d.jpg', pottery: '5b560fc43d8d9c8da90617f38d022d11.jpg' };
+const PROJECTS = [
+  { view: 'uncream', title: 'Un-Cream', tag: 'A coffee cup that skims the milk skin.', a: '56901f50dcb00019b6767d01cf2145e1.jpg', alt: 'Un-Cream coffee cup straining milk skin as it pours', pos: '50% 50%', b: '44d514a7950512bf86a0e0104fd390bc.jpg' },
+  { view: 'tumble', title: 'Tumble & Learn', tag: 'A gentle first bump for a brand-new crawler.', a: 'b2bba3112582722dc509303d29f0f4fd.jpg', alt: 'Smiling baby wearing the soft helmet', pos: '50% 50%', b: 'e52d32d27f7bc4918ce121869407b9f3.jpg' },
+  { view: 'safetolls', title: 'Safe Tolls', tag: 'A contact-free breath analyzer for the COVID era.', a: '859c297dcc6d03e728f96eacaeae1596.jpg', alt: 'Safe Tolls breath analyzer mounted in a toll booth', pos: '72% 50%', b: 'a1db685050c7f020c42c020d92b027f9.jpg' },
+  { view: 'xeyense', title: 'Xeyense', tag: 'A pantry jar that knows what it’s holding.', a: 'ab780ff2cde9fc9cb4052d607c983910.jpg', alt: 'Xeyense frosted pantry jar with a camera lid, filled with granola', pos: '50% 50%', b: '9b04e9f9838d3c93c112c07b922f0698.jpg' }
+];
+const VIEWS = ['home', 'industrial', 'artwork', 'digital', 'about', 'uncream', 'tumble', 'safetolls', 'xeyense'];
+const GROUP = { industrial: 'industrial', uncream: 'industrial', tumble: 'industrial', safetolls: 'industrial', xeyense: 'industrial', artwork: 'artwork', digital: 'digital', about: 'about' };
+const toTop = () => {
+  try { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; document.body.scrollTop = 0; } catch (e) {}
+};
+class Component extends DCLogic {
+  go(view) {
+    const cur = (this.state && this.state.view) || 'home';
+    if (cur === view) { toTop(); return; }
+    const stack = ((this.state && this.state.stack) || []).concat([cur]);
+    this.setState({ view: view, stack: stack }, toTop);
+  }
+  back() {
+    const stack = ((this.state && this.state.stack) || []).slice();
+    const prev = stack.pop() || 'home';
+    this.setState({ view: prev, stack: stack }, toTop);
+  }
+  renderVals() {
+    const s = this.state || {};
+    const view = s.view || 'home';
+    const picked = s.theme || this.props.theme || 'White';
+    const t = THEMES.find((x) => x.id === picked) || THEMES[0];
+    const filter = s.filter || 'all';
+    const cyc = s.cyc || {};
+    const palOpen = !!s.pal;
+    const mk = (v) => (e) => { if (e && e.preventDefault) e.preventDefault(); this.go(v); };
+    const nav = { top: (e) => { if (e && e.preventDefault) e.preventDefault(); toTop(); } };
+    VIEWS.forEach((v) => { nav[v] = mk(v); });
+    const v = {};
+    VIEWS.forEach((x) => { v[x] = x === view; });
+    const group = GROUP[view] || '';
+    const pills = [['industrial', 'Industrial'], ['artwork', 'Artwork'], ['digital', 'Digital']].map((p) => {
+      const on = group === p[0];
+      return {
+        label: p[1],
+        current: on ? 'page' : 'false',
+        go: nav[p[0]],
+        style: 'display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; ' + (on ? 'background: ' + t.ink + '; color: ' + t.ground : 'border: 1.5px solid currentColor')
+      };
+    });
+    const themes = THEMES.map((x, i) => {
+      const on = x.id === t.id;
+      const a = (90 + i * 22.5) * Math.PI / 180;
+      const R = 128, SZ = 34;
+      const lf = 147 + R * Math.cos(a) - SZ / 2;
+      const tp = 22 + R * Math.sin(a) - SZ / 2;
+      const shadow = (on ? '0 0 0 2px ' + t.ground + ', 0 0 0 4.5px ' + t.ink + ', ' : '0 0 0 1px rgba(128,128,128,.5), ')
+        + '0 8px 20px rgba(0,0,0,.22)';
+      return {
+        ground: x.ground,
+        label: x.id + ' theme',
+        pressed: on ? 'true' : 'false',
+        ring: shadow,
+        sw: 'position: absolute; left: ' + lf.toFixed(1) + 'px; top: ' + tp.toFixed(1) + 'px; width: ' + SZ + 'px; height: ' + SZ
+          + 'px; border-radius: 50%; padding: 0; border: 0; cursor: pointer; background: ' + x.ground
+          + '; box-shadow: ' + shadow
+          + '; transition: transform .55s var(--elastic), scale .4s var(--elastic), opacity .25s ease; transition-delay: '
+          + (i * 0.05).toFixed(2) + 's; transform: scale(' + (palOpen ? 1 : 0) + '); opacity: '
+          + (palOpen ? 1 : 0) + '; pointer-events: ' + (palOpen ? 'auto' : 'none'),
+        pick: () => this.setState({ theme: x.id, pal: false })
+      };
+    });
+    const pieces = {};
+    const hover = {};
+    ['pencil', 'digital', 'paint', 'pottery'].forEach((c) => {
+      const all = W.filter((w) => w[0] === c);
+      const list = all.filter((w) => w[1] === FIRST[c]).concat(all.filter((w) => w[1] !== FIRST[c]));
+      const cur = (cyc[c] || 0) % list.length;
+      pieces[c] = list.map((w, i) => ({ src: w[1], alt: w[3], op: i === cur ? 1 : 0 }));
+      hover[c] = () => {
+        const n = (this.state && this.state.cyc) || {};
+        this.setState({ cyc: Object.assign({}, n, { [c]: (n[c] || 0) + 1 }) });
+      };
+    });
+    const projects = PROJECTS.map((p) => ({ title: p.title, tag: p.tag, a: p.a, b: p.b, alt: p.alt, pos: p.pos, label: p.title + ' case study', go: nav[p.view] }));
+    const filters = CATS.map((c) => {
+      const on = c.id === filter;
+      return {
+        label: c.label,
+        count: c.id === 'all' ? W.length : W.filter((w) => w[0] === c.id).length,
+        pressed: on ? 'true' : 'false',
+        bg: on ? t.ink : 'transparent',
+        fg: on ? t.ground : t.ink,
+        pick: () => this.setState({ filter: c.id })
+      };
+    });
+    const items = W.filter((w) => filter === 'all' || w[0] === filter).map((w) => ({
+      src: w[1], title: w[2], alt: w[3], medium: MEDIUM[w[0]]
+    }));
+    return {
+      t, themes, pills, nav, v, pieces, hover, projects, filters, items,
+      canBack: view !== 'home',
+      back: (e) => { if (e && e.preventDefault) e.preventDefault(); this.back(); },
+      homeStyle: view === 'home' ? 'background: ' + t.ink + '; color: ' + t.ground + '; border-radius: 50%' : '',
+      palOpen: palOpen ? 'true' : 'false',
+      palToggle: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ pal: !palOpen }); },
+      palStyle: 'position: relative; z-index: 8' + (palOpen ? '; background: ' + t.ink + '; color: ' + t.ground + '; border-radius: 50%' : ''),
+      palArc: 'position: absolute; left: -125px; top: 0; width: 175px; height: 184px; z-index: 7; pointer-events: ' + (palOpen ? 'auto' : 'none'),
+      aboutCurrent: group === 'about' ? 'page' : 'false',
+      aboutStyle: group === 'about' ? 'background: ' + t.ink + '; color: ' + t.ground : ''
+    };
+  }
+}
+</script>
+</body>
+</html>
