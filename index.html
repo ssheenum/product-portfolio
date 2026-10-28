@@ -6,6 +6,31 @@
 <title>Swati Sheenum | Portfolio</title>
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGS46ZLCQD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JGS46ZLCQD', { send_page_view: false });
+(function () {
+  var last = null;
+  var TITLES = { home: 'Home', industrial: 'Industrial design', artwork: 'Artwork', digital: 'Digital products', about: 'About me', uncream: 'Un-Cream', tumble: 'Tumble & Learn', safetolls: 'Safe Tolls', xeyense: 'Xeyense', fineprint: 'Fine Print' };
+  window.__trackView = function (v) {
+    if (v === last) return;
+    last = v;
+    gtag('event', 'page_view', { page_title: TITLES[v] || v, page_path: v === 'home' ? '/' : '/' + v, page_location: location.origin + (v === 'home' ? '/' : '/' + v) });
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (a.hasAttribute('download') || /\.pdf($|\?)/i.test(h)) gtag('event', 'resume_download', { link_url: h });
+    else if (/linkedin\.com/i.test(h)) gtag('event', 'linkedin_click', { link_url: h });
+    else if (/^mailto:/i.test(h)) gtag('event', 'email_click');
+  }, true);
+})();
+</script>
+
 <script src="./support.js"></script>
 </head>
 <body>
@@ -1246,6 +1271,7 @@ class Component extends DCLogic {
   renderVals() {
     const s = this.state || {};
     const view = s.view || 'home';
+    try { if (typeof window !== 'undefined' && window.__trackView) window.__trackView(view); } catch (e) {}
     const picked = s.theme || this.props.theme || 'White';
     const t = THEMES.find((x) => x.id === picked) || THEMES[0];
     const filter = s.filter || 'all';
