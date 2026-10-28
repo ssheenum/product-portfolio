@@ -3,25 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swati Sheenum — Portfolio</title>
+<title>Swati Sheenum | Portfolio</title>
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.png">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
 <style>
 body{margin:0}
-.ss{--elastic:linear(0, 0.2178 2.1%, 1.1144 8.49%, 1.2959 10.7%, 1.3463 11.81%, 1.3705 12.94%, 1.3726, 1.3643 14.48%, 1.3151 16.2%, 1.0317 21.81%, 0.941 24.01%, 0.8912 25.91%, 0.8694 27.84%, 0.8698 29.21%, 0.8824 30.71%, 1.0122 38.33%, 1.0357, 1.046 42.71%, 1.0416 45.7%, 0.9961 53.26%, 0.9839 57.54%, 0.9853 60.71%, 1.0012 68.14%, 1.0056 72.24%, 0.9981 86.66%, 1);font-family:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.ss{--ease-soft:cubic-bezier(.22,1,.36,1);--elastic:linear(0, 0.2178 2.1%, 1.1144 8.49%, 1.2959 10.7%, 1.3463 11.81%, 1.3705 12.94%, 1.3726, 1.3643 14.48%, 1.3151 16.2%, 1.0317 21.81%, 0.941 24.01%, 0.8912 25.91%, 0.8694 27.84%, 0.8698 29.21%, 0.8824 30.71%, 1.0122 38.33%, 1.0357, 1.046 42.71%, 1.0416 45.7%, 0.9961 53.26%, 0.9839 57.54%, 0.9853 60.71%, 1.0012 68.14%, 1.0056 72.24%, 0.9981 86.66%, 1);font-family:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
 .disp{font-family:"Archivo","Arial Narrow",sans-serif;font-stretch:62%;font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;line-height:.84;text-wrap:balance}
 .eyebrow{font-family:"Archivo","Arial Narrow",sans-serif;font-stretch:85%;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;line-height:1.25}
 a{color:inherit;text-decoration:none}
 img{display:block}
 .fill{width:100%;height:100%;object-fit:cover}
-.w{display:inline-block;transform-origin:50% 100%;animation:rise .9s var(--elastic) both}
-@keyframes rise{from{scale:1 0;translate:0 .25ch}to{scale:1 1;translate:0 0}}
-.pop{animation:pop 1s var(--elastic) both}
-@keyframes pop{from{scale:0}to{scale:1}}
+.w{display:inline-block;animation:rise .7s var(--ease-soft) both}
+@keyframes rise{from{opacity:0;translate:0 .16ch}to{opacity:1;translate:0 0}}
+.pop{animation:pop .95s linear(0, .42 9%, .95 21%, 1.24 32%, 1.2 36%, .93 51%, 1.03 65%, .995 80%, 1) both,popfade .45s ease-out both}
+@keyframes pop{from{scale:.6}to{scale:1}}
+@keyframes popfade{from{opacity:0}to{opacity:1}}
+.pop:nth-child(1){animation-delay:.2s !important}.pop:nth-child(2){animation-delay:.26s !important}.pop:nth-child(3){animation-delay:.32s !important}.pop:nth-child(4){animation-delay:.38s !important}.pop:nth-child(5){animation-delay:.44s !important}.pop:nth-child(n+6){animation-delay:.5s !important}
 .fade{animation:fade 1.2s ease-out .25s both}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .card{transition:scale .8s var(--elastic),translate .8s var(--elastic)}
@@ -51,6 +56,7 @@ img{display:block}
 .palwrap:hover .swatch{transform:scale(1) !important;opacity:1 !important;pointer-events:auto !important}
 .palwrap:hover .arcbox{pointer-events:auto !important}
 .palwrap:hover .icon.big{background:var(--ink);color:var(--ground);border-radius:50%}
+a.icon[aria-label="Home"]:hover{background:var(--ink);color:var(--ground);border-radius:50%}
 }
 .palwrap:has(:focus-visible) .swatch{transform:scale(1) !important;opacity:1 !important;pointer-events:auto !important}
 .palwrap:has(:focus-visible) .arcbox{pointer-events:auto !important}
@@ -146,8 +152,8 @@ a:focus-visible,button:focus-visible{outline:3px solid currentColor;outline-offs
 .ab-hero .ab-mba .eyebrow{width:auto !important;height:auto !important;text-align:center}
 .ab-hero .ab-wrap{order:5;width:100% !important;margin:6px 0}
 .ab-hero .ab-photo{width:min(360px,78vw) !important;margin:0 auto}
-.ab-hero .ab-p{order:6;text-align:center !important;max-width:30em !important;font-size:19px !important}
-.ab-hero .ab-link{order:4;margin-top:0;justify-content:center}
+.ab-hero .ab-p{order:6;text-align:center !important;max-width:30em !important;font-size:19px !important;text-wrap:balance}
+.ab-hero .ab-link{order:7;margin-top:0;justify-content:center}
 }
 @media (max-width:600px){
 section#top{grid-template-columns:minmax(0,1fr) !important;min-height:0 !important;gap:28px !important;padding-top:32px !important}
@@ -182,6 +188,69 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 .wk-tubeA{animation-name:tubeA}.wk-tubeB{animation-name:tubeB}
 .wk-footA{animation-name:footA}.wk-footB{animation-name:footB}
 @media (prefers-reduced-motion: reduce){.wk-leg,.wk-tube,.wk-foot,.wk-sp,.wk-arm,.wk-torso,.wk-hip{animation:none}}@media (prefers-reduced-motion: reduce){.w,.pop,.fade{animation:none}.card,.pill,.icon,.swatch,.proj,.proj img,.pc,.stack .l{transition:none}}
+/* --- v36 mobile + layout fixes --- */
+.hdr .palwrap .icon.big svg{width:30px;height:30px}
+@media (max-width:860px){.hdr .palwrap .icon.big svg{width:24px;height:24px}}
+@media (min-width:1241px){.ab-hero .ab-link a.pill{white-space:nowrap}}
+@media (max-width:1240px){
+.ab-hero{display:flex !important;text-align:center !important}
+.ab-hero .ab-left{display:contents !important}
+.ab-hero .ab-mba{align-items:center !important}
+.ab-hero .ab-link{flex-wrap:wrap}
+}
+@media (max-width:700px){
+.artbox{rotate:0deg !important;translate:0 0 !important;width:calc(50% - 8px) !important}
+#art > div:nth-of-type(2){gap:28px 16px !important;padding-bottom:24px !important}
+.artbox .disp{font-size:20px !important}
+.fchip{min-height:34px !important;padding:0 11px !important;font-size:10.5px !important;gap:5px !important;letter-spacing:.06em !important}
+div[aria-label="Filter artwork by medium"]{gap:7px !important}
+.hm-mba .eyebrow,.hm-mba .eyebrow span{font-size:min(11px,2.9vw) !important;letter-spacing:.06em !important;white-space:nowrap !important}
+.ab-hero .ab-mba .eyebrow{font-size:min(11px,2.9vw) !important;letter-spacing:.06em !important;white-space:nowrap !important}
+.wk ol{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+.wk .step{padding:12px 8px !important;gap:6px !important;rotate:0deg !important;min-width:0}
+.wk .step > div:first-child{height:46px !important;border-radius:10px !important}
+.wk .step > div:first-child img{height:auto !important;max-height:28px;max-width:78%}
+.wk .step .eyebrow{font-size:10.5px !important}
+.wk .step .disp{font-size:21px !important;overflow-wrap:anywhere}
+.wk .step span:last-child{font-size:12.5px !important;line-height:1.3 !important}
+}
+
+/* --- v37 about mobile text + Patch case study --- */
+@media (max-width:700px){.ab-hero .ab-p{font-size:16px !important;line-height:1.5 !important;max-width:21.5em !important;text-wrap:balance;padding:0 6px;box-sizing:border-box}}
+.ph{--s:.62;position:relative;flex:none;width:calc(390px*var(--s));height:calc(844px*var(--s));border-radius:calc(44px*var(--s));overflow:hidden;background:#FFFFFF;box-shadow:0 9px 21px rgba(0,0,0,.14),0 38px 38px rgba(0,0,0,.10)}
+.ph .in{position:absolute;left:0;top:0;width:390px;height:844px;transform:scale(var(--s));transform-origin:0 0;text-align:left}
+.ph .in *{box-sizing:border-box}
+.pcard{display:flex !important;justify-content:center;align-items:flex-start;gap:16px;padding-top:7%;box-sizing:border-box}
+.pcard .ph{--s:.4}
+.pcard .ph:nth-child(2){margin-top:22px}
+.wip{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 14px;border-radius:999px;border:1.5px solid currentColor;font-family:"Archivo","Arial Narrow",sans-serif;font-stretch:85%;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;line-height:1}
+.wip::before{content:"";width:8px;height:8px;border-radius:50%;background:#D2232A}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 20px;list-style:none;margin:0;padding:0;width:100%}
+.pstep{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:left;min-width:0}
+.pstep .ph{--s:.62}
+.pstep .cap{display:flex;flex-direction:column;gap:6px;width:100%;max-width:250px}
+.hero-ph{display:flex;justify-content:center;align-items:flex-end;gap:30px;height:100%;padding-top:48px;box-sizing:border-box;overflow:hidden}
+.hero-ph .ph{--s:.62}
+.hero-ph .ph:nth-child(2){margin-bottom:-60px}
+.hero-ph .ph:nth-child(1),.hero-ph .ph:nth-child(3){margin-bottom:-120px}
+.pair2{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;width:100%}
+.pair2{--ps:.55}
+.pair2 figcaption{width:calc(390px*var(--ps));text-wrap:balance;line-height:1.3}
+.pair2 figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.pair2 .ph{--s:var(--ps)}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pstep .ph{--s:.6}}
+@media (max-width:700px){
+.herocard{aspect-ratio:3 / 2 !important;height:auto !important}.hero-ph{gap:0;align-items:flex-start;padding-top:26px}.hero-ph .ph:nth-child(1),.hero-ph .ph:nth-child(3){display:none}.hero-ph .ph{--s:.5}.hero-ph .ph:nth-child(2){margin-bottom:0}
+.pcard .ph{--s:.3}.pcard{gap:10px}.pcard .ph:nth-child(2){margin-top:14px}
+}
+@media (max-width:620px){.pstep .disp{font-size:24px !important;overflow-wrap:anywhere}.pgrid{gap:26px 12px}.pstep .ph{--s:.36}.pair2{--ps:.36;gap:14px}.pstep .cap{max-width:none}}
+
+/* --- v38 --- */
+.hdr .hr{gap:8px !important}
+.xb{margin:2px 0 8px;padding:0 0 0 20px;display:flex;flex-direction:column;gap:9px;font-size:17px;line-height:1.5;max-width:62em}
+@media (max-width:700px){.xb{font-size:16px;padding-left:18px;gap:8px}}
+.swati-word{transform-origin:50% 0;transform:scaleY(var(--sy,.5));will-change:transform}
+@media (prefers-reduced-motion: reduce){.swati-word{transform:none !important}}
 </style>
 </helmet>
 <div class="ss" style="--ink: {{t.ink}}; --ground: {{t.ground}}; background: {{t.ground}}; color: {{t.ink}}; transition: background .6s ease, color .6s ease; min-height: 100vh">
@@ -215,12 +284,15 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
   <sc-if value="{{v.home}}" hint-placeholder-val="{{true}}">
 
 
-  <section id="top" style="min-height: 620px; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; align-items: center; gap: 26px; text-align: center; padding: 34px 20px 34px">
+  <section id="top" style="min-height: 0; display: grid; grid-template-rows: auto auto auto; justify-items: center; align-items: center; gap: 26px; text-align: center; padding: 34px 20px 0">
     <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 15px; max-width: 46em"><span class="eyebrow">san francisco, Ca</span>
     </div>
 
     <div style="display: flex; flex-direction: column; align-items: center; gap: clamp(20px, 3vw, 38px); width: 100%">
       <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7vw, 104px); max-width: 11em"><span class="w" style="animation-delay: 0.05s">Designer</span> <span class="w" style="animation-delay: 0.12s">of everyday</span><span class="w" style="animation-delay: 0.26s">products</span></h1>
+
+      <div class="fade hm-mba" style="display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 17px; font-weight: 400; margin-top: calc(-1 * clamp(8px, 1.6vw, 20px))"><span class="eyebrow"><span style="color: rgb(102, 102, 102); letter-spacing: 0.12em">MBA student at UC Berkeley Haas - Class of 2028</span></span>
+      </div>
 
       <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 1040px">
         <div class="pop" style="animation-delay: .45s; width: clamp(88px, 13vw, 190px); margin-right: -3%">
@@ -250,16 +322,14 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
         </div>
       </div>
 
-      <h2 class="disp" style="margin: 0; font-size: 90px; max-width: 11em; color: {{t.soft}}">CURIOUS ABOUT PEOPLE&nbsp;</h2>
-    </div><div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 17px; font-weight: 400"><span class="eyebrow"><span style="color: rgb(102, 102, 102); letter-spacing: 0.12em">MBA student at UC Berkeley Haas · Class of 2028</span></span>
     </div>
 
     
   </section>
 
-  <section id="industrial" style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 68px 20px 26px">
+  <section id="industrial" style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 40px 20px 26px">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
-      <span class="eyebrow" style="color: {{t.soft}}">01 — Featured work</span>
+      <span class="eyebrow" style="color: {{t.soft}}">01 - Featured work</span>
       <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">Industrial design</h2>
       <p style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 24em">Objects that solve something.</p>
     </div>
@@ -284,9 +354,8 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
   <section id="art" style="display: flex; flex-direction: column; align-items: center; gap: 52px; padding: 84px 20px 26px">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
-      <span class="eyebrow" style="color: {{t.soft}}">02 — Personal practice</span>
+      <span class="eyebrow" style="color: {{t.soft}}">02 - Personal practice</span>
       <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">Art &amp; illustration</h2>
-      <p style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 24em">Work that speaks in quiet rooms.</p>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px 36px; width: 100%; max-width: 1240px; padding-bottom: 64px">
@@ -337,7 +406,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
   <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; padding: 44px 20px 26px">
     <span class="eyebrow fade" style="color: {{t.soft}}">01 - FEATURED WORK</span>
     <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em"><span class="w" style="animation-delay: .05s">Industrial</span> <span class="w" style="animation-delay: .12s">design</span></h1>
-    <p class="fade" style="margin: 0; font-size: 21px; line-height: 1.4; max-width: 26em; width: 602px; height: 52px; text-align: center">Everyday objects that make life a little easier</p>
+    <p class="fade" style="margin: 0; font-size: 21px; line-height: 1.4; max-width: 26em; text-align: center">Everyday objects that make life a little easier</p>
   </section>
   <section style="display: flex; flex-direction: column; align-items: center; padding: 38px 20px 84px">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 64px 48px; width: 100%; max-width: 1160px">
@@ -363,14 +432,14 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
   <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; padding: 50px 20px 26px">
     <span class="eyebrow fade" style="color: {{t.soft}}">02 - ART &amp; ILLUSTRATION</span>
-    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em">artwork</h1>
-    <p class="fade" style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 28em">Exploring different forms one at a time-<br>Graphite, pencil sketch, ink, watercolor, acrylic, pixels and clay</p>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em"><span class="w" style="animation-delay: .05s">artwork</span></h1>
+    <p class="fade" style="margin: 0; font-size: 17px; line-height: 1.4; max-width: 28em">Exploring different forms one at a time:<br>Graphite, pencil sketch, ink, watercolor, acrylic, pixels and clay</p>
   </section>
 
   <section style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 28px clamp(16px, 4vw, 48px) 84px">
     <div role="group" aria-label="Filter artwork by medium" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
       <sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
-        <button type="button" class="pill eyebrow" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; cursor: pointer; font-size: 13px; border: 1.5px solid currentColor; background: {{f.bg}}; color: {{f.fg}}">
+        <button type="button" class="pill eyebrow fchip" aria-pressed="{{f.pressed}}" onClick="{{f.pick}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; cursor: pointer; font-size: 13px; border: 1.5px solid currentColor; background: {{f.bg}}; color: {{f.fg}}">
           <span>{{f.label}}</span>
           <span style="opacity: .7">{{f.count}}</span>
         </button>
@@ -393,42 +462,267 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
   </sc-if>
   <sc-if value="{{v.digital}}" hint-placeholder-val="{{false}}">
-  <section id="top" style="min-height: 760px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 56px; text-align: center; padding: 58px 20px 70px">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 48px; text-align: center; padding: 58px 20px 84px">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 18px">
-      <span class="eyebrow fade" style="color: {{t.soft}}">03 — New chapter</span>
+      <span class="eyebrow fade" style="color: {{t.soft}}">03 - New chapter</span>
       <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 10em"><span class="w" style="animation-delay: .05s">Digital</span> <span class="w" style="animation-delay: .12s">products</span></h1>
-      <p class="fade" style="margin: 0; font-size: 18px; line-height: 1.4; max-width: 26em; width: 533px; height: 73px">Work in progress.&nbsp;Building digital products with the same attention to detail</p>
+      <p class="fade" style="margin: 0; font-size: 18px; line-height: 1.4; max-width: 28em; text-align: center; text-wrap: balance">A tool to check if the new trendy skincare you saw on social media will actually work for you</p>
     </div>
-    <div style="width: 100%; max-width: 980px; aspect-ratio: 16 / 7; border-radius: 22px; border: 1.5px dashed {{t.line}}; display: grid; place-items: center; box-sizing: border-box; padding: 18px">
-      <span class="eyebrow" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border: 1.5px solid currentColor; border-radius: 999px">Case studies coming soon</span>
+    <article style="display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; width: 100%; max-width: 560px">
+      <a href="#top" onClick="{{nav.fineprint}}" class="proj pcard" aria-label="Fine Print case study" style="background: {{t.ph}}">
+        <div class="ph " role="img" aria-label="App screen: a score of 88 out of 100 and a plain yes"><div class="in" inert><img src="63c489ead4d62fecb298240daf5a785a.webp" alt="" style="display:block;width:390px;height:844px"></div></div>
+        <div class="ph " role="img" aria-label="App screen: a score of 38 out of 100 and a plain skip, with the fragrance and the harsh cleanser highlighted as the reasons"><div class="in" inert><img src="eb7eab2c8069fa054b744488d87edffc.webp" alt="" style="display:block;width:390px;height:844px"></div></div>
+      </a>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+        <span class="wip">Work in progress</span>
+        <h3 class="disp" style="margin: 0; font-size: 40px"><a href="#top" onClick="{{nav.fineprint}}">Fine Print<span style="color: #D2232A">*</span></a></h3>
+        <a href="#top" onClick="{{nav.fineprint}}" class="eyebrow ul" style="padding: 12px 4px">View case study</a>
+      </div>
+    </article>
+  </section>
+
+  </sc-if>
+  <sc-if value="{{v.fineprint}}" hint-placeholder-val="{{false}}">
+  <section id="top" style="display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding: 38px 20px 26px">
+    <div class="fade" style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+      <span class="eyebrow" style="color: {{t.soft}}">Project 01</span>
+    </div>
+    <span class="wip fade">Work in progress</span>
+    <h1 class="disp" style="margin: 0; font-size: clamp(50px, 7.2vw, 112px); max-width: 11em"><span class="w" style="animation-delay: .05s">Fine</span> <span class="w" style="animation-delay: .12s">Print<span style="color: #D2232A">*</span></span></h1>
+    <p class="fade" style="margin: 0; font-size: 19px; line-height: 1.35; max-width: 24em; color: {{t.soft}}">Check if your product will work before you buy it</p>
+    <div class="pop card herocard" style="animation-delay: .35s; width: 100%; max-width: 1040px; aspect-ratio: 3 / 2; border-radius: 26px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
+      <img class="fill" src="764e4c566b076b4ae80067e56d146317.webp" alt="Skincare bottles, a tube and a jar on a stone block in soft morning light" style="object-position: 50% 50%">
     </div>
   </section>
 
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; padding: 44px 20px 72px">
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">01 - BACKSTORY</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">A new country, a blank shelf</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">I moved countries for my MBA. That meant finding my creams, my shampoos and the rest of my shelf all over again.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">Today, a lot of people choose what to buy from what influencers say on TikTok and Instagram. A great video is not proof that a product will work on someone’s skin.</p>
+        </div>
+      </div>
+
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">02 - PROBLEM AND USER</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">A feed is not a skin test</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Claims are loud. Evidence is hard to find. Ingredient lists are long and hard to read. And what works for one person can break out another.</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Fine Print<span style="color: #D2232A">*</span> is for people who read or watch product reviews to figure out what to buy.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">They want an answer, not a study. So the app leads with one clear score and keeps the detail one tap away.</p>
+        </div>
+      </div>
+      <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic; max-width: 30em">“How can I know if it will work for me?”</blockquote>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">03 - THE IDEA</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Snap it, score it, learn from it</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Fine Print<span style="color: #D2232A">*</span> reads a product, checks its ingredients against the shopper’s own skin and history, and says plainly whether it is a yes or a skip.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">The score belongs to one product at a time. There is no score for a whole shelf.</p>
+        </div>
+      </div>
+      <ol class="pgrid">
+        <li class="pstep"><div class="ph " role="img" aria-label="App screen: point the camera at the front of a product and the app finds it"><div class="in" inert><img src="2298ac65922de55b4a973b10c4d2d16f.webp" alt="" style="display:block;width:390px;height:844px"></div></div><div class="cap"><span class="eyebrow" style="color: {{t.soft}}">01</span><span class="disp" style="font-size: 32px">Snap</span><span style="font-size: 15px; line-height: 1.4">Point the camera at the front of a product in the store. The app finds it.</span></div></li>
+        <li class="pstep"><div class="ph " role="img" aria-label="App screen: the app reads the ingredient list and checks it against the shopper"><div class="in" inert><div data-dc-tpl="3" style="width: 390px; height: 844px; box-sizing: border-box; background: rgb(255, 255, 255); font-family: &quot;Instrument Sans&quot;, sans-serif; color: rgb(20, 20, 20); position: relative; overflow: hidden; padding: 20px 20px 0px; display: flex; flex-direction: column; align-items: center;">
+  <span data-dc-tpl="4" style="align-self: flex-end; font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 44px;">fine print<sup data-dc-tpl="5" style="color: rgb(210, 35, 42); font-size: 0.8em;">*</sup></span>
+
+  <div data-dc-tpl="6" style="margin-top: 70px; position: relative; width: 240px; height: 240px; display: flex; align-items: center; justify-content: center;">
+    <svg data-dc-tpl="7" width="240" height="240" viewBox="0 0 240 240" aria-hidden="true" style="position: absolute; left: 0px; top: 0px;">
+      <circle data-dc-tpl="8" cx="120" cy="120" r="110" fill="none" stroke="#EFEEEA" stroke-width="8"></circle>
+    </svg>
+    <svg data-dc-tpl="9" width="240" height="240" viewBox="0 0 240 240" aria-hidden="true" style="position: absolute; left: 0px; top: 0px; animation: 1.4s linear 0s infinite normal none running fpspin;">
+      <circle data-dc-tpl="10" cx="120" cy="120" r="110" fill="none" stroke="#D2232A" stroke-width="8" stroke-linecap="round" stroke-dasharray="125 700" transform="rotate(-90 120 120)"></circle>
+    </svg>
+    <div data-dc-tpl="11" style="display: flex; align-items: flex-end; gap: 10px;">
+      <svg data-dc-tpl="12" width="44" height="96" viewBox="0 0 44 96" aria-hidden="true" style="animation: 1.8s ease-in-out 0s infinite normal none running fpbob;">
+        <rect data-dc-tpl="13" x="14" y="2" width="16" height="12" rx="3" fill="#D2232A"></rect>
+        <rect data-dc-tpl="14" x="4" y="14" width="36" height="80" rx="12" fill="#FBE9EA" stroke="#D2232A" stroke-width="2.5"></rect>
+        <rect data-dc-tpl="15" x="11" y="40" width="22" height="20" rx="4" fill="#FFFFFF" stroke="#D2232A" stroke-width="2"></rect>
+        <circle data-dc-tpl="16" cx="16" cy="70" r="1.6" fill="#D2232A"></circle><circle data-dc-tpl="17" cx="28" cy="78" r="1.6" fill="#D2232A"></circle>
+      </svg>
+      <svg data-dc-tpl="18" width="34" height="74" viewBox="0 0 34 74" aria-hidden="true" style="animation: 1.8s ease-in-out 0.3s infinite normal none running fpbob;">
+        <rect data-dc-tpl="19" x="11" y="2" width="12" height="14" rx="6" fill="#D2232A"></rect>
+        <rect data-dc-tpl="20" x="8" y="16" width="18" height="7" rx="2" fill="#D2232A"></rect>
+        <rect data-dc-tpl="21" x="3" y="23" width="28" height="49" rx="8" fill="#FFFFFF" stroke="#D2232A" stroke-width="2.5"></rect>
+        <path data-dc-tpl="22" d="M10 46h14" stroke="#D2232A" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <svg data-dc-tpl="23" width="58" height="50" viewBox="0 0 58 50" aria-hidden="true" style="animation: 1.8s ease-in-out 0.6s infinite normal none running fpbob;">
+        <rect data-dc-tpl="24" x="6" y="2" width="46" height="13" rx="4" fill="#D2232A"></rect>
+        <rect data-dc-tpl="25" x="3" y="15" width="52" height="33" rx="10" fill="#FBE9EA" stroke="#D2232A" stroke-width="2.5"></rect>
+        <path data-dc-tpl="26" d="M17 31c3 3 7 3 10 0M31 31c3 3 7 3 10 0" stroke="#D2232A" stroke-width="2" stroke-linecap="round" fill="none"></path>
+      </svg>
+    </div>
+  </div>
+
+  <span data-dc-tpl="27" style="margin-top: 30px; font-size: 30px; font-weight: 700; letter-spacing: -0.035em; line-height: 1;">Reading the fine print…</span>
+  <span data-dc-tpl="28" style="margin-top: 10px; font-size: 15px; color: rgb(107, 106, 102); min-height: 22px;"><span class="sc-interp">Checking them against you</span></span>
+
+  
+  
+    <div data-dc-tpl="32" style="margin-top: 34px; height: 52px; padding: 0px 28px; border-radius: 999px; border: 1.5px solid rgb(236, 235, 231); display: flex; align-items: center; font-size: 16px; font-weight: 600; text-decoration: none;">Stop</div>
+  </div></div></div><div class="cap"><span class="eyebrow" style="color: {{t.soft}}">02</span><span class="disp" style="font-size: 32px">Read</span><span style="font-size: 15px; line-height: 1.4">It reads the ingredient list and checks every line against the shopper’s own profile.</span></div></li>
+        <li class="pstep"><div class="ph " role="img" aria-label="App screen: a score of 88 out of 100 and a plain yes"><div class="in" inert><img src="63c489ead4d62fecb298240daf5a785a.webp" alt="" style="display:block;width:390px;height:844px"></div></div><div class="cap"><span class="eyebrow" style="color: {{t.soft}}">03</span><span class="disp" style="font-size: 32px">Score</span><span style="font-size: 15px; line-height: 1.4">One number out of 100, a plain yes or skip, and the good and the watch-outs in short words.</span></div></li>
+        <li class="pstep"><div class="ph " role="img" aria-label="App screen: after a few weeks, rate how the product went"><div class="in" inert><div data-dc-tpl="3" style="width: 390px; height: 844px; box-sizing: border-box; background: rgb(143, 142, 138); font-family: &quot;Instrument Sans&quot;, sans-serif; color: rgb(20, 20, 20); position: relative; overflow: hidden;">
+  <div data-dc-tpl="4" aria-label="Close" style="position: absolute; inset: 0px; display: block;"></div>
+  <div data-dc-tpl="5" role="dialog" aria-label="Rate Neutrogena Hydro Boost" style="position: absolute; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); border-radius: 28px 28px 0px 0px; padding: 12px 20px 28px; display: flex; flex-direction: column; gap: 14px;">
+    <div data-dc-tpl="6" style="align-self: center; width: 38px; height: 4px; border-radius: 4px; background: rgb(236, 235, 231);"></div>
+    <div data-dc-tpl="7" style="display: flex; align-items: center; gap: 12px;">
+      <div data-dc-tpl="8" style="width: 56px; height: 56px; border-radius: 14px; border: 1px solid rgb(236, 235, 231); overflow: hidden; flex-shrink: 0;"><img data-dc-tpl="9" src="7bccdc7df203798721562e5a3c131176.webp" alt="" style="width: 100%; height: 100%; object-fit: contain;"></div>
+      <div data-dc-tpl="10" style="display: flex; flex-direction: column;">
+        <span data-dc-tpl="11" style="font-size: 13px; color: rgb(107, 106, 102);">3 weeks with Neutrogena Hydro Boost</span>
+        <span data-dc-tpl="12" style="font-size: 26px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.08;">So… how's it going?</span>
+      </div>
+    </div>
+    <button data-dc-tpl="13" style="height: 62px; border-radius: 20px; font-family: inherit; font-size: 17px; font-weight: 600; color: rgb(20, 20, 20); text-align: left; padding: 0px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border: 1.5px solid rgb(236, 235, 231); background: rgb(255, 255, 255);">Obsessed <span data-dc-tpl="14" style="font-size: 13px; font-weight: 500; color: rgb(107, 106, 102);">would rebuy</span></button>
+    <button data-dc-tpl="15" style="height: 62px; border-radius: 20px; font-family: inherit; font-size: 17px; font-weight: 600; color: rgb(20, 20, 20); text-align: left; padding: 0px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border: 1.5px solid rgb(236, 235, 231); background: rgb(255, 255, 255);">It's fine <span data-dc-tpl="16" style="font-size: 13px; font-weight: 500; color: rgb(107, 106, 102);">nothing special</span></button>
+    <button data-dc-tpl="17" style="height: 62px; border-radius: 20px; font-family: inherit; font-size: 17px; font-weight: 600; color: rgb(20, 20, 20); text-align: left; padding: 0px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border: 1.5px solid rgb(236, 235, 231); background: rgb(255, 255, 255);">My skin said no <span data-dc-tpl="18" style="font-size: 13px; font-weight: 500; color: rgb(107, 106, 102);">reacted</span></button>
+    
+    <span data-dc-tpl="24" style="font-size: 13px; color: rgb(107, 106, 102);">I'll use this to rescore everything with the same ingredients.</span>
+    <div data-dc-tpl="25" style="display: flex; gap: 10px;">
+      <div data-dc-tpl="26" style="flex: 1 1 0%; height: 52px; border-radius: 999px; border: 1.5px solid rgb(236, 235, 231); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; text-decoration: none;">Not now</div>
+      <div data-dc-tpl="27" style="flex: 1 1 0%; height: 52px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600; text-decoration: none; color: rgb(255, 255, 255); background: rgb(233, 167, 170);">Save</div>
+    </div>
+  </div></div></div></div><div class="cap"><span class="eyebrow" style="color: {{t.soft}}">04</span><span class="disp" style="font-size: 32px">Rate</span><span style="font-size: 15px; line-height: 1.4">A few weeks later, say how it went. Everything with the same ingredients gets rescored.</span></div></li>
+      </ol>
+    </section>
+    <section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <span class="eyebrow" style="color: {{t.soft}}">04 - WHAT IT CHECKS</span>
+          <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Ingredients, evidence and the brand’s own claims</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px">
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Behind the score, the app pulls the full ingredient list and looks for clinical evidence on the ingredients that matter to the shopper’s concerns and allergies.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5">It also looks for public tests behind the claims on the box, and flags ingredients that are banned in other countries.</p>
+        </div>
+      </div>
+      <div class="pair2">
+        <figure><div class="ph " role="img" aria-label="App screen: a score of 38 out of 100 and a plain skip, with the fragrance and the harsh cleanser highlighted as the reasons"><div class="in" inert><img src="eb7eab2c8069fa054b744488d87edffc.webp" alt="" style="display:block;width:390px;height:844px"></div></div><figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">A skip comes with reasons</figcaption></figure>
+        <figure><div class="ph " role="img" aria-label="App screen: what the app has learned works and does not work for the shopper"><div class="in" inert><div data-dc-tpl="3" style="width: 390px; height: 844px; box-sizing: border-box; background: rgb(255, 255, 255); font-family: &quot;Instrument Sans&quot;, sans-serif; color: rgb(20, 20, 20); position: relative; overflow: hidden;">
+  <div data-dc-tpl="4" style="position: absolute; inset: 0px 0px 80px; overflow-y: auto; padding: 20px 20px 28px; box-sizing: border-box; display: flex; flex-direction: column;">
+    <div data-dc-tpl="5" style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-top: 6px;">
+      <span data-dc-tpl="6" style="font-size: 34px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.02;">Profile</span>
+      <span data-dc-tpl="7" style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em;">fine print<sup data-dc-tpl="8" style="color: rgb(210, 35, 42); font-size: 0.8em;">*</sup></span>
+    </div>
+
+    <span data-dc-tpl="9" style="margin-top: 26px; font-size: 13px; font-weight: 600; color: rgb(107, 106, 102); padding-bottom: 6px;">About you</span>
+    <div data-dc-tpl="10" style="display: flex; flex-direction: column; border-top: 1px solid rgb(236, 235, 231);">
+      
+        <div data-dc-tpl="12" style="border-bottom: 1px solid rgb(236, 235, 231); padding: 12px 0px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 12px; min-height: 28px;">
+            <span data-dc-tpl="14" style="width: 96px; flex-shrink: 0; font-size: 14px; color: rgb(107, 106, 102);"><span class="sc-interp">Skin type</span></span>
+            <span data-dc-tpl="15" style="flex: 1 1 0%; min-width: 0px; font-size: 15px; font-weight: 600; line-height: 1.35;"><span class="sc-interp">Dry</span></span>
+            <button data-dc-tpl="16" style="border: none; background: none; padding: 8px 0px 8px 8px; min-height: 44px; font-family: inherit; font-size: 14px; font-weight: 600; color: rgb(210, 35, 42); cursor: pointer;"><span class="sc-interp">Edit</span></button>
+          </div>
+          
+        </div>
+      
+        <div data-dc-tpl="12" style="border-bottom: 1px solid rgb(236, 235, 231); padding: 12px 0px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 12px; min-height: 28px;">
+            <span data-dc-tpl="14" style="width: 96px; flex-shrink: 0; font-size: 14px; color: rgb(107, 106, 102);"><span class="sc-interp">Hair type</span></span>
+            <span data-dc-tpl="15" style="flex: 1 1 0%; min-width: 0px; font-size: 15px; font-weight: 600; line-height: 1.35;"><span class="sc-interp">Wavy</span></span>
+            <button data-dc-tpl="16" style="border: none; background: none; padding: 8px 0px 8px 8px; min-height: 44px; font-family: inherit; font-size: 14px; font-weight: 600; color: rgb(210, 35, 42); cursor: pointer;"><span class="sc-interp">Edit</span></button>
+          </div>
+          
+        </div>
+      
+        <div data-dc-tpl="12" style="border-bottom: 1px solid rgb(236, 235, 231); padding: 12px 0px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 12px; min-height: 28px;">
+            <span data-dc-tpl="14" style="width: 96px; flex-shrink: 0; font-size: 14px; color: rgb(107, 106, 102);"><span class="sc-interp">Fixing</span></span>
+            <span data-dc-tpl="15" style="flex: 1 1 0%; min-width: 0px; font-size: 15px; font-weight: 600; line-height: 1.35;"><span class="sc-interp">Redness, Sensitivity</span></span>
+            <button data-dc-tpl="16" style="border: none; background: none; padding: 8px 0px 8px 8px; min-height: 44px; font-family: inherit; font-size: 14px; font-weight: 600; color: rgb(210, 35, 42); cursor: pointer;"><span class="sc-interp">Edit</span></button>
+          </div>
+          
+        </div>
+      
+        <div data-dc-tpl="12" style="border-bottom: 1px solid rgb(236, 235, 231); padding: 12px 0px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 12px; min-height: 28px;">
+            <span data-dc-tpl="14" style="width: 96px; flex-shrink: 0; font-size: 14px; color: rgb(107, 106, 102);"><span class="sc-interp">Avoiding</span></span>
+            <span data-dc-tpl="15" style="flex: 1 1 0%; min-width: 0px; font-size: 15px; font-weight: 600; line-height: 1.35;"><span class="sc-interp">Fragrance</span></span>
+            <button data-dc-tpl="16" style="border: none; background: none; padding: 8px 0px 8px 8px; min-height: 44px; font-family: inherit; font-size: 14px; font-weight: 600; color: rgb(210, 35, 42); cursor: pointer;"><span class="sc-interp">Edit</span></button>
+          </div>
+          
+        </div>
+      
+        <div data-dc-tpl="12" style="border-bottom: 1px solid rgb(236, 235, 231); padding: 12px 0px; display: flex; flex-direction: column; gap: 12px;">
+          <div data-dc-tpl="13" style="display: flex; align-items: center; gap: 12px; min-height: 28px;">
+            <span data-dc-tpl="14" style="width: 96px; flex-shrink: 0; font-size: 14px; color: rgb(107, 106, 102);"><span class="sc-interp">Fragrance</span></span>
+            <span data-dc-tpl="15" style="flex: 1 1 0%; min-width: 0px; font-size: 15px; font-weight: 600; line-height: 1.35;"><span class="sc-interp">Flag it</span></span>
+            <button data-dc-tpl="16" style="border: none; background: none; padding: 8px 0px 8px 8px; min-height: 44px; font-family: inherit; font-size: 14px; font-weight: 600; color: rgb(210, 35, 42); cursor: pointer;"><span class="sc-interp">Edit</span></button>
+          </div>
+          
+        </div>
+      
+    </div>
+
+    <span data-dc-tpl="21" style="margin-top: 30px; font-size: 13px; font-weight: 600; color: rgb(107, 106, 102);">What I've learned about you</span>
+    <span data-dc-tpl="22" style="margin-top: 12px; font-size: 15px; font-weight: 600;">Works for you</span>
+    <div data-dc-tpl="23" style="margin-top: 6px; display: flex; flex-direction: column;">
+      <div data-dc-tpl="24" style="padding: 12px 0px; border-top: 1px solid rgb(236, 235, 231); border-bottom: 1px solid rgb(236, 235, 231);"><div data-dc-tpl="25" style="font-size: 16px; font-weight: 600;">Ceramides</div><div data-dc-tpl="26" style="font-size: 14px; color: rgb(107, 106, 102); margin-top: 2px;">Face, body · high confidence</div></div>
+      <div data-dc-tpl="27" style="padding: 12px 0px; border-bottom: 1px solid rgb(236, 235, 231);"><div data-dc-tpl="28" style="font-size: 16px; font-weight: 600;">Colloidal oatmeal</div><div data-dc-tpl="29" style="font-size: 14px; color: rgb(107, 106, 102); margin-top: 2px;">Body · medium confidence</div></div>
+    </div>
+    <span data-dc-tpl="30" style="margin-top: 16px; font-size: 15px; font-weight: 600;">Not for you</span>
+    <div data-dc-tpl="31" style="margin-top: 6px; display: flex; flex-direction: column;">
+      <div data-dc-tpl="32" style="padding: 12px 0px; border-top: 1px solid rgb(236, 235, 231); border-bottom: 1px solid rgb(236, 235, 231);"><div data-dc-tpl="33" style="font-size: 16px; font-weight: 600; color: rgb(210, 35, 42);">Linalool</div><div data-dc-tpl="34" style="font-size: 14px; color: rgb(107, 106, 102); margin-top: 2px;">Face, scalp · medium confidence</div></div>
+    </div>
+
+    <span data-dc-tpl="35" style="margin-top: 28px; font-size: 12px; line-height: 1.5; color: rgb(107, 106, 102);">Changes apply to your next scan. Product data and photos from Open Beauty Facts.</span>
+  </div>
+
+  <div data-dc-tpl="36" style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 80px; background: rgb(255, 255, 255); border-top: 1px solid rgb(236, 235, 231); display: flex; justify-content: space-between; align-items: center; padding: 0px 40px; box-sizing: border-box;">
+    <div data-dc-tpl="37" style="width: 76px; height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; font-size: 12px; font-weight: 500; color: rgb(107, 106, 102);">
+      <svg data-dc-tpl="38" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path data-dc-tpl="39" d="M10 2.5h4v3h-4z"></path><path data-dc-tpl="40" d="M9 5.5h6l1 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 8 20V8z"></path></svg>My shelf</div>
+    <div data-dc-tpl="41" aria-label="Snap a product" style="width: 68px; height: 68px; margin-top: -36px; border-radius: 999px; background: rgb(210, 35, 42); display: flex; align-items: center; justify-content: center; box-shadow: rgb(255, 255, 255) 0px 0px 0px 6px, rgba(210, 35, 42, 0.28) 0px 10px 24px;">
+      <svg data-dc-tpl="42" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path data-dc-tpl="43" d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1.5-2h6l1.5 2h2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"></path><circle data-dc-tpl="44" cx="12" cy="13" r="3.5"></circle></svg></div>
+    <div data-dc-tpl="45" style="width: 76px; height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; font-size: 12px; font-weight: 600; color: rgb(20, 20, 20);">
+      <svg data-dc-tpl="46" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle data-dc-tpl="47" cx="12" cy="8" r="4"></circle><path data-dc-tpl="48" d="M4 20c1.5-4 4.5-5.5 8-5.5s6.5 1.5 8 5.5"></path></svg>Profile</div>
+  </div></div></div></div><figcaption class="eyebrow" style="color: {{t.soft}}; text-align: center">What it learns about the shopper</figcaption></figure>
+      </div>
+    </section>
+
+    <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
+      <a href="#top" onClick="{{nav.digital}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All digital products</a>
+    </nav>
+  </div>
   </sc-if>
   <sc-if value="{{v.about}}" hint-placeholder-val="{{false}}">
 
 
-  <section id="top" class="ab-hero" style="position: relative; width: 1419px; max-width: 1440px; margin-left: auto; margin-right: auto; box-sizing: border-box; min-height: 600px; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; align-items: center; gap: 26px; text-align: center; padding: 48px 20px 16px; height: 501px">
-    
-
-    <h2 class="disp ab-h2" style="margin: 0; font-size: clamp(50px, 7vw, 72px); max-width: 11em; color: {{t.soft}}; position: absolute; left: 385px; top: 131px; text-align: justify; height: 58px; width: 257px">&amp; BUILDER</h2><h1 class="disp ab-h1" style="margin: 0; font-size: clamp(28px, 7vw, 56px); max-width: 11em; position: absolute; text-align: right; left: 293px; top: 79px; width: 418px; height: 45px"><span class="w" style="animation-delay: 0.05s">Engineer, Designer</span></h1><div class="ab-wrap" style="display: flex; flex-direction: column; align-items: center; gap: clamp(20px, 3vw, 38px); width: 100%">
-      
-      <div class="pop ab-photo" style="animation-delay: .4s; width: 360px; position: absolute; left: 836px; top: 40px; height: 536px">
+  <section id="top" class="ab-hero" style="position: relative; width: 100%; max-width: 1160px; margin-left: auto; margin-right: auto; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 40px 56px; align-items: center; padding: 48px 20px 16px; text-align: left">
+    <div class="ab-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-width: 0">
+      <h1 class="disp ab-h1" style="margin: 0; font-size: clamp(34px, 5.4vw, 80px); max-width: none"><span class="w" style="animation-delay: .05s">Engineer,</span> <span class="w" style="animation-delay: .12s">Designer</span></h1>
+      <h2 class="disp ab-h2" style="margin: -6px 0 0; font-size: clamp(34px, 5.4vw, 80px); max-width: none; color: {{t.soft}}"><span class="w" style="animation-delay: .19s">&amp;</span> <span class="w" style="animation-delay: .26s">Builder</span></h2>
+      <div class="fade ab-mba" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px"><span class="eyebrow" style="font-size: 15px">Now an MBA student at UC Berkeley Haas</span></div>
+      <div class="ab-p" style="margin: 0; font-size: 18px; line-height: 1.5; max-width: 34em; text-align: left"><span>I'm Swati. I love uncovering why people do what they do, and turning those insights into better, more <i>human</i> products.<br></span><br>I’ve worked across manufacturing, consumer research, and product development and taken ideas from user interviews to launch.<br><br>Now at Berkeley Haas, I’m exploring the intersection of technology and design to build products people love and can’t imagine living without.</div>
+      <div class="ab-link" style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; flex-wrap: wrap; margin-top: 6px"><a href="78b2489ac07fd8c8cffad8e64c80517c.pdf" download="Swati_Sheenum_Resume.pdf" target="_blank" rel="noopener" class="pill eyebrow" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg>Download resume</a><a href="https://linkedin.com/in/swati-sheenum" target="_blank" rel="noopener" aria-label="Swati on LinkedIn" title="LinkedIn" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="display:block"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div>
+    </div>
+    <div class="ab-wrap" style="display: flex; flex-direction: column; align-items: center; width: 100%; min-width: 0">
+      <div class="pop ab-photo" style="animation-delay: .4s; width: 100%; max-width: 380px">
         <div class="card" style="aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; rotate: 2deg; box-shadow: 0 9px 21px rgba(0,0,0,.14), 0 38px 38px rgba(0,0,0,.10), 0 85px 51px rgba(0,0,0,.05)">
           <img class="fill" src="bcf160887d096599d019745a72d7450e.jpg" alt="Swati smiling in front of the Golden Gate Bridge" style="object-position: 50% 50%">
         </div>
       </div>
-      
-    </div><div class="ab-link" style="display: flex; align-items: center; gap: 12px; position: absolute; left: 368px; top: 240px"><a href="78b2489ac07fd8c8cffad8e64c80517c.pdf" download="Swati_Sheenum_Resume.pdf" target="_blank" rel="noopener" class="pill eyebrow" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg>Download resume</a><a href="https://linkedin.com/in/swati-sheenum" target="_blank" rel="noopener" aria-label="Swati on LinkedIn" title="LinkedIn" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="display:block"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></div><div class="ab-p" style="margin: 0; font-size: 18px; line-height: 1.45; width: 578px; text-align: justify; position: absolute; left: 215px; top: 317px; height: 206px"><span>I'm Swati. I love uncovering why people do what they do, and turning those insights into better, more <i>human</i> products.<br></span><br>I’ve worked across manufacturing, consumer research, and product development and taken ideas from user interviews to launch.<br><br>Now at Berkeley Haas, I’m exploring the intersection of technology and design to build products people love and can’t imagine living without.<span><br><br><br></span></div>
-
-    <div class="fade ab-mba" style="display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 30em; position: absolute; left: 304px; top: 205px; width: 413px"><span class="eyebrow" style="font-size: 15px">Now an MBA student at UC Berkeley Haas</span>
     </div>
   </section>
 
   
 
   <section style="display: flex; flex-direction: column; align-items: center; gap: 64px; padding: 40px 20px 24px; text-align: start; position: relative">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
+      
       <h2 class="disp" style="margin: 0; font-size: clamp(42px, 5.2vw, 80px)">My journey so far</h2>
     </div>
     <div class="lane" style="position:relative; width:100%; max-width:1160px; height:330px; margin:-8px 0 -18px; text-align:start">
@@ -489,8 +783,8 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
     <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
       <p style="margin: 0; font-size: 18px; line-height: 1.5">Built for the Indian household where un-homogenized milk forms a film of milk-skin (malai or chaali).</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Form</span></div>
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 · Sketching · CAD</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product - Form</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 - Sketching - CAD</span></div>
       </div>
     </div>
   </section>
@@ -564,7 +858,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
     <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
       <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
-      <a href="#top" onClick="{{nav.tumble}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 02 Tumble &amp; Learn →</a>
+      <a href="#top" onClick="{{nav.tumble}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next - 02 Tumble &amp; Learn →</a>
     </nav>
   </div>
   </sc-if>
@@ -580,8 +874,8 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
     <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
       <p style="margin: 0; font-size: 18px; line-height: 1.5">A baby helmet that swaps non-biodegradable styrofoam for biodegradable air cushions, cutting helmet weight by 40%.</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Sustainability · CMF</span></div>
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 · Soft goods · Material research</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product - Sustainability - CMF</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Fusion 360 - Soft goods - Material research</span></div>
       </div>
     </div>
   </section>
@@ -596,7 +890,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
           <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">The runway starts the day they crawl</h2>
         </div>
         <div style="display: flex; flex-direction: column; gap: 15px">
-          <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 572px; height: 103px">The moment a baby pushes up onto their hands and knees, the floor becomes a runway, and every coffee-table corner becomes a problem. Some children also self-soothe by head-banging into furniture and floors.</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">The moment a baby pushes up onto their hands and knees, the floor becomes a runway, and every coffee-table corner becomes a problem. Some children also self-soothe by head-banging into furniture and floors.</p>
           <p style="margin: 0; font-size: 16px; line-height: 1.5">Parents are left to choose between bubble-wrapping their living room and watching every second.</p>
         </div>
       </div>
@@ -612,7 +906,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
           <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">PROTECTIVE. LIGHT.&nbsp;</h2>
         </div>
         <div style="display: flex; flex-direction: column; gap: 15px">
-          <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 563px; height: 73px">Existing baby helmets are either rigid plastic shells borrowed from cycling, or bulky bonnets stuffed with EPS foam. They’re hot, heavy, and ugly enough that most parents quietly give up on them.</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.5">Existing baby helmets are either rigid plastic shells borrowed from cycling, or bulky bonnets stuffed with EPS foam. They’re hot, heavy, and ugly enough that most parents quietly give up on them.</p>
           <p style="margin: 0; font-size: 16px; line-height: 1.5">The brief: design something a baby will actually wear, and a parent will actually put on.</p>
         </div>
       </div>
@@ -624,7 +918,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
     <blockquote style="margin: 0; padding: 2px 0 2px 16px; border-left: 3px solid currentColor; font-size: 18px; line-height: 1.4; font-style: italic"><b>Market scan</b>: rigid plastic shells and un-sustainable bulky styrofoam bonnets.</blockquote><figure style="margin: 0; display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 720px; justify-content: center"><div class="pairgrid"><a href="d09e4f31a582e592db1f0d8df0f80e55.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 3 / 4; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="d09e4f31a582e592db1f0d8df0f80e55.jpg" alt="A baby wearing a rigid blue plastic helmet shell" style="display: block; width: 100%; height: 100%; object-fit: cover"></a><a href="9caaf777724342bb8190e41248f7f805.jpg" target="_blank" rel="noopener" class="card" style="display: block; aspect-ratio: 3 / 4; border-radius: 20px; overflow: hidden; background: {{t.ph}}; box-shadow: 0 9px 21px rgba(0,0,0,.12), 0 38px 38px rgba(0,0,0,.08)"><img src="9caaf777724342bb8190e41248f7f805.jpg" alt="A baby wearing a bulky padded fabric bonnet helmet" style="display: block; width: 100%; height: 100%; object-fit: cover"></a></div></figure><section style="width: 100%; max-width: 1160px; display: flex; flex-direction: column; gap: 30px; border-top: 1.5px solid {{t.line}}; padding-top: 36px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 22px 44px; align-items: start">
         <div style="display: flex; flex-direction: column; gap: 15px">
-          <span class="eyebrow" style="color: {{t.soft}}">03 — Design approach</span>
+          <span class="eyebrow" style="color: {{t.soft}}">03 - Design approach</span>
           <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Shredded jute, sandwiched</h2>
         </div>
         <div style="display: flex; flex-direction: column; gap: 15px">
@@ -645,7 +939,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
         <div style="display: flex; flex-direction: column; gap: 15px">
           <h2 class="disp" style="margin: 0; font-size: clamp(34px, 4vw, 60px)">Final Design</h2>
         </div>
-        <p style="margin: 0; font-size: 18px; line-height: 1.5; width: 372px; height: 46px">The final form is a soft shell in playful prints: dinosaurs, clouds, a tiny galaxy.</p><div style="display: flex; flex-direction: column; gap: 15px">
+        <p style="margin: 0; font-size: 18px; line-height: 1.5">The final form is a soft shell in playful prints: dinosaurs, clouds, a tiny galaxy.</p><div style="display: flex; flex-direction: column; gap: 15px">
           
           
         </div>
@@ -656,7 +950,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
     <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
       <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
-      <a href="#top" onClick="{{nav.safetolls}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 03 Safe Tolls →</a>
+      <a href="#top" onClick="{{nav.safetolls}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next - 03 Safe Tolls →</a>
     </nav>
   </div>
   </sc-if>
@@ -672,8 +966,8 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
     <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
       <p style="margin: 0; font-size: 18px; line-height: 1.5">Drunk driving accounts for a startling share of the 6,871 accidents a year on the Old Mahabalipuram Road, one of the busiest highways in Chennai. <br><br>Safe Tolls turns the breath analyser into a contactless dispenser with a single-use breath pouch</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · Mechanism · Public safety</span></div>
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: rgb(102, 102, 102)">Tools</span><span class="eyebrow">Mechanism design · chemistry · Sketching</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product - Mechanism - Public safety</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: rgb(102, 102, 102)">Tools</span><span class="eyebrow">Mechanism design - chemistry - Sketching</span></div>
       </div>
     </div>
   </section>
@@ -757,7 +1051,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
     <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
       <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
-      <a href="#top" onClick="{{nav.xeyense}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 04 Xeyense →</a>
+      <a href="#top" onClick="{{nav.xeyense}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next - 04 Xeyense →</a>
     </nav>
   </div>
 
@@ -774,8 +1068,8 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
     <div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 40px; text-align: left; padding-top: 24px">
       <p style="margin: 0; font-size: 18px; line-height: 1.5">A smart container with a load cell at the base and a tiny camera in the lid. Computer vision identifies what you’ve poured in; a companion app keeps a running log of what you’ve consumed today.</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product · IoT · Computer vision</span></div>
-        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Hardware · Embedded ML · App design</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Discipline</span><span class="eyebrow">Product - IoT - Computer vision</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px"><span class="eyebrow" style="color: {{t.soft}}">Tools</span><span class="eyebrow">Hardware - Embedded ML - App design</span></div>
       </div>
     </div>
   </section>
@@ -805,7 +1099,7 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
     <nav aria-label="Project navigation" style="width: 100%; max-width: 1160px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 13px; border-top: 1.5px solid {{t.line}}; padding-top: 24px">
       <a href="#top" onClick="{{nav.industrial}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1.5px solid currentColor; border-radius: 999px">← All projects</a>
-      <a href="#top" onClick="{{nav.uncream}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next · 01 Un-Cream →</a>
+      <a href="#top" onClick="{{nav.uncream}}" class="pill eyebrow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: {{t.ink}}; color: {{t.ground}}">Next - 01 Un-Cream →</a>
     </nav>
   </div>
 
@@ -819,31 +1113,30 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
         <h2 class="disp" style="margin: 0; font-size: 48px">Experience</h2>
         <div style="display: flex; flex-direction: column">
           <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}">
-            <span class="eyebrow">2024 — 2026</span>
-            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Whisper</span>
-              <span style="font-size: 15px; line-height: 1.4">Scientist, R&amp;D</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Led 0-1 product development for P&amp;G Whisper’s 1st locally designed and manufactured product (Disposable Period Underwear) in India&nbsp;</li><li>Translated in-depth consumer research into a product built specifically for the needs of Indian women while navigating a supply-chain crisis</li><li>Partnered with marketing/legal to shape claims and messaging the product could genuinely stand behind, turning consumer research into a GTM launch that resonated with users</li></ul>
+            <span class="eyebrow">2024 - 2026</span>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G - Whisper</span>
+              <span style="font-size: 15px; line-height: 1.4">Scientist, R&amp;D</span><ul class="xb"><li>Led 0-1 product development for P&amp;G Whisper’s 1st locally designed and manufactured product (Disposable Period Underwear) in India</li><li>Translated in-depth consumer research into a product built specifically for the needs of Indian women while navigating a supply-chain crisis</li><li>Partnered with marketing/legal to shape claims and messaging the product could genuinely stand behind, turning consumer research into a GTM launch that resonated with users</li></ul>
             </div>
             <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="d88b382e8a8e274e328c2bf6a73d17f6.png" alt="Whisper" style="height: 20px; width: auto"></div>
           </div>
           <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}">
-            <span class="eyebrow">2022 — 2024</span>
-            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Pampers</span>
-              <span style="font-size: 15px; line-height: 1.4">Product Supply Manager | Line Leader</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Led a 14-person Pampers manufacturing line team through a results turnaround.</li><li>Built digital tools adopted across the manufacturing plant, including Pampers India’s 1st barcode verification system, which helped eliminate “wrong-product” complaints and a predictive maintenance dashboard reducing repeat breakdowns 20%.</li></ul>
+            <span class="eyebrow">2022 - 2024</span>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G - Pampers</span>
+              <span style="font-size: 15px; line-height: 1.4">Product Supply Manager | Line Leader</span><ul class="xb"><li>Led a 14-person Pampers manufacturing line team through a results turnaround.</li><li>Built digital tools adopted across the manufacturing plant, including Pampers India’s 1st barcode verification system, which helped eliminate “wrong-product” complaints and a predictive maintenance dashboard reducing repeat breakdowns 20%.</li></ul>
             </div>
             <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="da4844655e199583405ff69e30a998e9.png" alt="Pampers" style="height: 32px; width: auto"></div>
           </div>
           <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 84px; align-items: center; gap: 13px; padding: 14px 0; border-top: 1.5px solid {{t.line}}; border-bottom: 1.5px solid {{t.line}}">
             <span class="eyebrow">2021</span>
-            <div style="display: flex; flex-direction: column; gap: 6px">
-              <span class="disp" style="font-size: 26px; line-height: 1">P&amp;G · Oral-B Tech Hub</span>
-              <span style="font-size: 15px; line-height: 1.4">Product Supply Intern</span><ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45"><li>Built a PowerBI annual-planning dashboard with 90% forecast accuracy. Re-applied the dashboard to Oral-B’s Tech Hub team in China. Co-created the first end-to-end supply-chain tracking tool, hitting 100% adoption within 2 months.</li></ul>
+            <div style="display: flex; flex-direction: column; gap: 6px"><span class="disp" style="font-size: 26px; line-height: 1">P&amp;G - Oral-B Tech Hub</span>
+              <span style="font-size: 15px; line-height: 1.4">Product Supply Intern</span><ul class="xb"><li>Built a PowerBI annual-planning dashboard with 90% forecast accuracy.</li><li>Re-applied the dashboard to Oral-B’s Tech Hub team in China.</li><li>Co-created the first end-to-end supply-chain tracking tool, hitting 100% adoption within 2 months.</li></ul>
             </div>
             <div style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 10px; background: #FFFFFF"><img src="37bf83e281bb69a62325a99cd52322b8.png" alt="Oral-B" style="height: 20px; width: auto"></div>
           </div>
         </div>
       </div>
-<section style="display: flex; flex-direction: column; align-items: center; padding: 0 20px 40px; margin-top: -28px; grid-column: 1 / -1; width: 100%; box-sizing: border-box">
-    <div style="width: 100%; max-width: 1160px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 40px 32px; border-top: 1.5px solid {{t.line}}; padding-top: 26px">
+<section style="display: flex; flex-direction: column; align-items: center; padding: 0 20px 40px; margin-top: -10px; grid-column: 1 / -1; width: 100%; box-sizing: border-box">
+    <div style="width: 100%; max-width: 1160px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 40px 32px; padding-top: 26px">
       <div style="display: flex; flex-direction: column; gap: 12px">
         <span class="disp" style="font-size: 64px">$15M+</span>
         <span class="eyebrow">Revenue growth influenced at P&amp;G</span>
@@ -861,17 +1154,18 @@ a.disp{font-size:clamp(18px,6vw,34px) !important;overflow-wrap:anywhere}
 
     </div>
   </section>
-  </sc-if><footer style="container-type: inline-size; background: {{t.ground}}; color: {{t.ink}}; border-top: 1.5px solid {{t.line}}; transition: background .6s ease, color .6s ease; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 52px 0 26px; text-align: center; overflow: hidden">
+  </sc-if><footer style="container-type: inline-size; background: {{t.ground}}; color: {{t.ink}}; border-top: {{footBorder}}; transition: background .6s ease, color .6s ease; display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 52px 0 26px; text-align: center; overflow: hidden">
     <span class="eyebrow">Let’s build some great products together!</span>
     <div style="display:flex; flex-direction:column; align-items:center; gap:18px">
       <span class="eyebrow" style="color: {{t.soft}}">Contact</span>
       <nav aria-label="Contact" style="display:flex; align-items:center; gap:16px">
         <a class="icon ct" href="https://linkedin.com/in/swati-sheenum" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="display:block"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
-        <a class="icon ct" href="mailto:sheenum.swati@gmail.com" target="_blank" rel="noopener" aria-label="Email" title="Email" style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7.5 12 13.5l8.5-6"></path></svg></a>
+        <a class="icon ct" href="mailto:swati_sheenum@berkeley.edu" onClick="{{mailClick}}" aria-label="Email swati_sheenum@berkeley.edu" title="Email" style="display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1.5px solid {{t.ink}}; color:{{t.ink}}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7.5 12 13.5l8.5-6"></path></svg></a>
       </nav>
+      <span class="eyebrow" aria-live="polite" style="min-height: 16px; font-size: 12px; color: {{t.soft}}; text-transform: none; letter-spacing: .04em">{{copiedText}}</span>
       <a href="#top" onClick="{{nav.top}}" class="eyebrow ul" style="padding: 8px 4px">Back to top</a>
     </div>
-    <div class="disp" aria-hidden="true" style="font-size: 40cqi; line-height: .8; letter-spacing: -0.04em; color: {{t.ph}}; margin-top: 24px; user-select: none">Swati</div>
+    <div class="disp swati-word" aria-hidden="true" style="font-size: 40cqi; line-height: .8; letter-spacing: -0.04em; color: {{t.ph}}; margin-top: 24px; user-select: none">Swati</div>
     <small class="eyebrow" style="font-size: 11px">© 2026 Swati Sheenum</small>
   </footer>
 
@@ -919,7 +1213,7 @@ const W = [
   ['paint', '102bd61800a1f0fcb5827b290b3022a2.jpg', 'Mt Fuji', 'Ink painting of a boat, mountains and blossoms'],
   ['pencil', 'e4d625b85173f7bf72cafacdf55eef15.jpg', 'Sea', 'Pencil drawings of shells, a turtle and a jellyfish'],
   ['paint', '139a67dee7dde301d19f5090f329f9d6.jpg', 'Seascape', 'Painted seascape with palm leaves and rocks'],
-  ['pencil', '0f6facb49fd307920b8cdf2a0eda8ea6.jpg', 'Egg study · 2021', 'Graphite study of an egg'],
+  ['pencil', '0f6facb49fd307920b8cdf2a0eda8ea6.jpg', 'Egg study - 2021', 'Graphite study of an egg'],
   ['digital', '01b898a183be1b0edf4d5598d357d5fe.jpg', 'Palm study', 'Digital line drawing of an open hand'],
   ['paint', '73bad5b96c7261d3c1f8923390199941.jpg', 'Pondicherry', 'Painted yellow wall with a parked scooter'],
   ['pencil', '44f88cef6a3c208ce630c441533e2601.jpg', 'Animal kingdom', 'Pen doodles of animals'],
@@ -932,8 +1226,8 @@ const PROJECTS = [
   { view: 'safetolls', title: 'Safe Tolls', tag: 'A contact-free breath analyzer for the COVID era.', a: '859c297dcc6d03e728f96eacaeae1596.jpg', alt: 'Safe Tolls breath analyzer mounted in a toll booth', pos: '72% 50%', b: 'a1db685050c7f020c42c020d92b027f9.jpg' },
   { view: 'xeyense', title: 'Xeyense', tag: 'A pantry jar that knows what it’s holding.', a: 'ab780ff2cde9fc9cb4052d607c983910.jpg', alt: 'Xeyense frosted pantry jar with a camera lid, filled with granola', pos: '50% 50%', b: '9b04e9f9838d3c93c112c07b922f0698.jpg' }
 ];
-const VIEWS = ['home', 'industrial', 'artwork', 'digital', 'about', 'uncream', 'tumble', 'safetolls', 'xeyense'];
-const GROUP = { industrial: 'industrial', uncream: 'industrial', tumble: 'industrial', safetolls: 'industrial', xeyense: 'industrial', artwork: 'artwork', digital: 'digital', about: 'about' };
+const VIEWS = ['home', 'industrial', 'artwork', 'digital', 'about', 'uncream', 'tumble', 'safetolls', 'xeyense', 'fineprint'];
+const GROUP = { industrial: 'industrial', uncream: 'industrial', tumble: 'industrial', safetolls: 'industrial', xeyense: 'industrial', artwork: 'artwork', digital: 'digital', fineprint: 'digital', about: 'about' };
 const toTop = () => {
   try { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; document.body.scrollTop = 0; } catch (e) {}
 };
@@ -975,7 +1269,7 @@ class Component extends DCLogic {
     const themes = THEMES.map((x, i) => {
       const on = x.id === t.id;
       const a = (90 + i * 22.5) * Math.PI / 180;
-      const R = 128, SZ = 34;
+      const R = 96, SZ = 30;
       const lf = 147 + R * Math.cos(a) - SZ / 2;
       const tp = 22 + R * Math.sin(a) - SZ / 2;
       const shadow = (on ? '0 0 0 2px ' + t.ground + ', 0 0 0 4.5px ' + t.ink + ', ' : '0 0 0 1px rgba(128,128,128,.5), ')
@@ -1025,16 +1319,44 @@ class Component extends DCLogic {
       t, themes, pills, nav, v, pieces, hover, projects, filters, items,
       canBack: view !== 'home',
       back: (e) => { if (e && e.preventDefault) e.preventDefault(); this.back(); },
-      homeStyle: view === 'home' ? 'background: ' + t.ink + '; color: ' + t.ground + '; border-radius: 50%' : '',
+      homeStyle: '',
+      copiedText: s.copied ? 'swati_sheenum@berkeley.edu (copied)' : '',
+      mailClick: () => {
+        try { if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText('swati_sheenum@berkeley.edu'); } catch (e) {}
+        this.setState({ copied: true });
+        setTimeout(() => { try { this.setState({ copied: false }); } catch (e) {} }, 3000);
+      },
+      footBorder: view === 'about' ? '0 solid transparent' : '1.5px solid ' + t.line,
       palOpen: palOpen ? 'true' : 'false',
       palToggle: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ pal: !palOpen }); },
       palStyle: 'position: relative; z-index: 8' + (palOpen ? '; background: ' + t.ink + '; color: ' + t.ground + '; border-radius: 50%' : ''),
-      palArc: 'position: absolute; left: -125px; top: 0; width: 175px; height: 184px; z-index: 7; pointer-events: ' + (palOpen ? 'auto' : 'none'),
+      palArc: 'position: absolute; left: -125px; top: 0; width: 175px; height: 150px; z-index: 7; pointer-events: ' + (palOpen ? 'auto' : 'none'),
       aboutCurrent: group === 'about' ? 'page' : 'false',
       aboutStyle: group === 'about' ? 'background: ' + t.ink + '; color: ' + t.ground : ''
     };
   }
 }
+
+(function () {
+  if (typeof window === 'undefined' || window.__swatiStretch) return;
+  window.__swatiStretch = true;
+  var raf = 0;
+  function upd() {
+    raf = 0;
+    var el = document.querySelector('.swati-word');
+    if (!el) return;
+    var f = el.closest('footer'); if (!f) return;
+    var r = f.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var p = Math.max(0, Math.min(1, (vh - r.top) / Math.max(1, r.height)));
+    el.style.setProperty('--sy', (0.26 + 0.74 * p).toFixed(3));
+  }
+  function req() { if (!raf) raf = requestAnimationFrame(upd); }
+  window.addEventListener('scroll', req, { passive: true });
+  window.addEventListener('resize', req);
+  setInterval(req, 400);
+  req();
+})();
 </script>
 </body>
 </html>
